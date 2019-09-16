@@ -17,7 +17,7 @@ export class Player {
   }
 
   resetHP() {
-    this.hp
+    this.hp;
   }
 
   loseHP(damage) {
