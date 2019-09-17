@@ -1,27 +1,13 @@
 export class Game {
-  constructor(player) {
+  constructor() {
     this.level = 0;
     this.characters = [];
-    this.gameState = player.died;
     // this.playerTurn = true;
     // this.npcTurn = false;
   }
 
 nextLevel() {
   this.level ++;
-}
-
-// resetGame() {
-//   setTimeout(function() {
-//   location.reload(); 
-//   }, 10000);
-// }
-
-gameOver(targetOutput) {
-  if (this.gameState === true) {
-    targetOutput.text('gg uninstall');
-    // this.resetGame();
-  }
 }
 
 }
@@ -31,7 +17,6 @@ export class Player {
     this.name = name;
     this.hp = 10;
     this.playerLevel = 1;
-    this.died = false;
     this.attackStrong = 3;
     this.attackWeak = 1;
   }
@@ -55,9 +40,12 @@ export class Player {
     this.hp -= damage;
   }
 
-  death() {
+  death(targetOutput) {
     if (this.hp <= 0) {
-      this.died = true;
+      targetOutput.text('gg uninstall');
+      // add all game over actions here
+    // } else if (){
+      // button logic
     }
   }
 }
