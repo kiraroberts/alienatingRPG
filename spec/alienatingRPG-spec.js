@@ -22,7 +22,8 @@ it('player should have name, hp, level, and attack stats', function() {
 });
 
 it('attack strong should assign 3 to the damage variable', function() {
-    
+    let damage = bot.strongAttack();
+    expect(damage).toEqual(3);
 });
 
 it('should reset the hp when called', function() {

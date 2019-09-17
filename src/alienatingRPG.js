@@ -1,6 +1,7 @@
 export class Game {
   constructor() {
     this.level = 0;
+    this.gameOver = false;
     this.characters = [];
     // this.playerTurn = true;
     // this.npcTurn = false;
@@ -19,6 +20,17 @@ export class Player {
     this.loseGame = false;
     this.attackStrong = 3;
     this.attackWeak = 1;
+  }
+
+  strongAttack() {
+    let chance = Math.floor(Math.random() * 100);
+    if (chance < 61) {
+      let damage = this.attackStrong; 
+      return damage;
+    } else {
+      // display text 'attack missed'
+      return 0;
+    }
   }
 
   resetHP() {
