@@ -15,12 +15,13 @@ it('player should have name, hp, level, and attack stats', function() {
     expect(bot).toEqual(jasmine.objectContaining({name: 'bot',
     hp: 10,
     playerLevel: 1,
-    loseGame: false,
+    died: false,
     attackStrong: 3,
     attackWeak: 1
 }));
 });
 
+// this method runs with Math.random, it WILL return a 0 value sometimes
 it('attack strong should assign 3 to the damage variable', function() {
     let damage = bot.strongAttack();
     expect(damage).toEqual(3);
@@ -35,7 +36,7 @@ it('should reset the hp when called', function() {
 it('should evaluated whether the player has died', function(){
     bot.hp = 0;
     bot.death();
-    expect(bot.loseGame).toEqual(true);
+    expect(bot.died).toEqual(true);
 });
 
 it('should lose hp when attacked', function() {
@@ -47,17 +48,26 @@ it('should lose hp when attacked', function() {
 });
 
 describe('Game', function() {
+    let bot;
     let rpg;
+    
   
   beforeEach(function() {
-    rpg = new Game();
+    bot = new Player('bot'); 
+    rpg = new Game(bot);
   });
 
-// initial test, should fail
+
 it('should instantiate and keep track of levels', function() {
     rpg.nextLevel();
     expect(rpg.level).toEqual(1);
 });
 
+it('game over should evaluate to true when player dies', function() {
+    let noob = new Player('noob'); 
+    let rpgOver = new Game(noob);
+    noob.died = true;
+    expect(rpgOver.gameState).toEqual(true);
+});
 
 });
