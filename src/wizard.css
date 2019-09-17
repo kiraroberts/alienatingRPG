@@ -1,5 +1,7 @@
 
 .hat{
+  position: relative;
+  left: 100px;
   width: 0;
   height: 300px;
   border-left: 50px solid transparent;
@@ -7,16 +9,13 @@
   border-bottom: 100px solid purple;
 }
 .face {
-
   width: 100px;
   height: 100px;
   background: pink;
   border-radius: 50% / 100%;
 
 }
-.col-md-3 {
 
-}
 .eye {
   width: 10px;
   height: 40px;
@@ -30,21 +29,24 @@
 
 .head {
 
-  margin-left: 75px;
+  position: relative;
+  right: 25px;
+
 
 }
 
 .wizard {
-  margin: 200px;
-  padding-left: 15px;
+  width: 300px;
   animation: bounceNslide 5s infinite;
 }
 
 .mustache {
+  position: relative;
+  top: -10px;
   height: 20px;
   border-left: 25px solid transparent;
   border-right: 25px solid transparent;
-  border-bottom: 12px solid darkgray;
+  border-bottom: 18px solid darkgray;
 }
 
 .beard {
@@ -53,7 +55,8 @@
   border: 50px solid transparent;
   border-bottom: 20px solid darkgray;
   position: relative;
-  top: -50px;
+  top: -60px;
+  right: 15px;
   text-align: center;
 
 }
@@ -76,8 +79,8 @@
   border-top-right-radius: 10%;
 }
 
-.bod{
-  width: 25%;
+.bod {
+  width: 200px;
   margin-left: 75px;
 }
 
