@@ -54,6 +54,7 @@ export class PopUpWizard {
   constructor() {
     this.hp = 10;
     this.attack = 2;
+  
   }
 
   loseHP(damage) {
@@ -65,5 +66,8 @@ export class PopUpWizard {
     return popUpDamage;
     // creates an alert
     // needs to return a damage value
+    // set timer for attacks to happen in given interval (maybe random interval?)
   }
+
+  // method to begin animation
 }
