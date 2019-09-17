@@ -5,10 +5,15 @@ export class Game {
     // this.playerTurn = true;
     // this.npcTurn = false;
   }
+nextLevel() {
+  this.level++;
+}
+
 }
 
 export class Player {
-  constructor() {
+  constructor(name) {
+    this.name = name;
     this.hp = 10;
     this.playerLevel = 1;
     this.loseGame = false;
@@ -17,7 +22,7 @@ export class Player {
   }
 
   resetHP() {
-    this.hp
+    this.hp = 10;
   }
 
   loseHP(damage) {
