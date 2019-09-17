@@ -1,5 +1,7 @@
 import { Game } from './../src/alienatingRPG.js';
 import { Player } from './../src/alienatingRPG.js';
+import { PopUpWizard } from './../src/alienatingRPG.js';
+
 
 describe('Player', function() {
     let bot;
@@ -58,5 +60,20 @@ it('should instantiate and keep track of levels', function() {
     expect(rpg.level).toEqual(1);
 });
 
+
+});
+
+describe('PopUpWizard', function() {
+    let wiz;
+    
+  
+  beforeEach(function() {
+    wiz = new PopUpWizard();
+  });
+
+it('should do damage when attacks', function() {
+    let damage = wiz.popUpAttack();
+    expect(damage).toEqual(2);
+});
 
 });

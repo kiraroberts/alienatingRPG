@@ -50,7 +50,7 @@ export class Player {
   }
 }
 
-export class popUpWizard {
+export class PopUpWizard {
   constructor() {
     this.hp = 10;
     this.attack = 2;
@@ -60,7 +60,10 @@ export class popUpWizard {
     this.hp -= damage;
   }
 
-  attack() {
-    //alert or something and damage
+  popUpAttack() {
+    let popUpDamage = this.attack;
+    return popUpDamage;
+    // creates an alert
+    // needs to return a damage value
   }
 }
