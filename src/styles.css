@@ -1,0 +1,14 @@
+body {
+  background-image: url("https://images.unsplash.com/photo-1561912847-95100ed8646c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+  background-size: cover;
+
+}
+.card {
+  margin: 5px;
+  background: rgba(50, 50, 50, 0.7);
+}
+
+button {
+  margin: 3px;
+  border-radius: 5px;
+}
