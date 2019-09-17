@@ -6,7 +6,7 @@ export class Game {
     // this.npcTurn = false;
   }
 nextLevel() {
-  this.level++;
+  this.level ++;
 }
 
 }
@@ -32,8 +32,6 @@ export class Player {
   death() {
     if (this.hp <= 0) {
       this.loseGame = true;
-    } else {
-      this.loseGame = false;
     }
   }
 }
