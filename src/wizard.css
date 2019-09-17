@@ -155,17 +155,20 @@
   margin-left: auto;
   margin-right: auto;
   width: 50px;
-  height: 13px;
-  background: black;
+  height: 10px;
+  background: gold;
   z-index: 5;
   top: -10px;
   left: -20px;
 }
 .wandTip{
-  width: 15px;
-  height: 50px;
-  background: silver;
-  padding-top: -20px;
+  width: 25px;
+  height: 25px;
+  background: gold;
+  border-radius: 50%;
+  position: relative;
+  top: -9px;
+  left:-15px
 }
 
 .left-arm {
