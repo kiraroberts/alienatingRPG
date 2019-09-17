@@ -1,12 +1,3 @@
-/* .wizard {
-  animation-name: slidein;
-  animation-duration: 5s;
-  animation-iteration-count: 3;
-  animation-direction: alternate;
-  position: static;
-  /* padding: 15px; */
-
-/* } */
 
 .hat{
   width: 0;
@@ -38,10 +29,9 @@
 }
 
 .head {
-  /* margin: 0;
-  margin-top: 33%;
-  margin-left: 36%;
-  margin-right: 25%; */
+
+  margin-left: 75px;
+
 }
 
 .wizard {
@@ -68,7 +58,7 @@
 
 }
 .beard:after {
-  text-align: center;
+
   content: '';
   position: absolute;
   left: -50px;
@@ -79,23 +69,23 @@
   border-top: 70px solid darkgray;
 }
 .robes{
-
   width: 115px;
   background: purple;
-  height: 200px;
+  height: 150px;
   border-top-left-radius: 10%;
   border-top-right-radius: 10%;
 }
 
 .bod{
   width: 25%;
+  margin-left: 75px;
 }
 
 .arms {
-  height: 175px;
+  height: 125px;
   width: 10px;
   background: purple;
-  border: 3px solid black;
+  /* border: 3px solid black; */
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -114,9 +104,9 @@
 	z-index: 1
 }
 .cloudshadow, .cloudshadow:after, .cloudshadow:before {
-    margin: 0;
-    box-shadow: 0 0 25px #2c3e50;
-    z-index: -99;
+  margin: 0;
+  box-shadow: 0 0 25px #2c3e50;
+  z-index: -99;
 }
 .cloud:after, .cloudshadow:after {
 	width: 100px; height: 100px;
@@ -133,19 +123,19 @@
 @keyframes bounceNslide {
   0%, 100% {
     top: 0;
-    margin-right: 200px;
+    left: 75px;
 
   }
   50% {
-    transform: translateX(100px);
+
     transform: translateY(25px);
-    margin-right: 300px
+
   }
   25%, 75% {
     top: 100px;
-    transform: translateX(175px);
+
     transform: translateY(50px);
-    margin-right: 250px;
+
   }
 }
 
@@ -160,14 +150,22 @@
   }
 }
 
-#wand {
-  display: run-in;
+.wand {
+  position: relative;
   margin-left: auto;
   margin-right: auto;
-  width: 120px;
+  width: 50px;
   height: 13px;
-  background: gold;
+  background: black;
   z-index: 5;
+  top: -10px;
+  left: -20px;
+}
+.wandTip{
+  width: 15px;
+  height: 50px;
+  background: silver;
+  padding-top: -20px;
 }
 
 .left-arm {
@@ -176,5 +174,5 @@
 }
 
 .right-arm {
-  position: ;
+  position: absolute;
 }
