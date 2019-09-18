@@ -19,6 +19,11 @@ export class Player {
     this.attackWeak = 1;
   }
 
+  weakAttack() {
+    let damage = this.attackWeak;
+    return damage;
+  }
+
   strongAttack() {
     let chance = Math.floor(Math.random() * 100);
     if (chance < 61) {
