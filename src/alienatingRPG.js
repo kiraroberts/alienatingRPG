@@ -68,6 +68,6 @@ export class PopUpWizard {
     // needs to return a damage value
     // set timer for attacks to happen in given interval (maybe random interval?)
   }
-
+  
   // method to begin animation
 }
