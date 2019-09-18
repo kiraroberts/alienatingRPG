@@ -24,7 +24,7 @@ export class Player {
   strongAttack() {
     let chance = Math.floor(Math.random() * 100);
     if (chance < 61) {
-      let damage = this.attackStrong; 
+      let damage = this.attackStrong;
       return damage;
     } else {
       // display text 'attack missed'
@@ -48,13 +48,20 @@ export class Player {
       // button logic
     }
   }
+
+  levelUp() {
+    setInterval(function() {
+      alert("You leveled up!");
+    }, Math.floor(Math.random() * 60000));
+  }
+
 }
 
 export class PopUpWizard {
   constructor() {
     this.hp = 10;
     this.attack = 2;
-  
+
   }
 
   loseHP(damage) {
@@ -71,4 +78,3 @@ export class PopUpWizard {
 
   // method to begin animation
 }
-
