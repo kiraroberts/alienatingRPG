@@ -1,9 +1,8 @@
 import { Game } from './alienatingRPG.js';
 import { Player } from './alienatingRPG.js';
 import { PopUpWizard } from './alienatingRPG.js';
-import { playerStrongAttack } from './combat.js';
-import { playerWeakAttack } from './combat.js';
-import { wizardAttack } from './combat.js';
+import { playerStrongAttack, playerWeakAttack, wizardAttack } from './combat.js';
+
 
 import $ from 'jquery';
 import 'bootstrap';
