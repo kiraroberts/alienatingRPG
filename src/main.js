@@ -14,12 +14,9 @@ import './../css/loading-bar.css';
 
 
 $(document).ready(function() {
-  console.log(Player);
-  console.log(Game);
-  console.log(PopUpWizard);
   // $('.start-game').show();
   $('.start-game').click(function() {
-  // let game = new Game();
+  let game = new Game();
   // hide start screen &
   // fade-in character creator
   });
@@ -27,7 +24,7 @@ $(document).ready(function() {
   // $('.character-creator').click(function() {
   // right swipe is what calls this function
   // creates a variable to house the players name (and pass picture to display)
-  // let player = new Player('x')
+  let player = new Player('x')
   // 
   // confirm character choice button assigns character to display variable and hides character creation screen/show level 1
   // })
@@ -38,6 +35,7 @@ $(document).ready(function() {
   // hide level one complete screen, show level two/pop up wizard
   // })
   // call level two combat function/ all pop up wizard fight methods here
+  let wizard = new PopUpWizard();
   // $('#strong-attack').click(function() {
   //   playerStrongAttack(player, wizard);
   // });
