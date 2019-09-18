@@ -1,22 +1,25 @@
 // combat functions that calls player and wizard methods
 
-export function playerStrongAttack(player, wizard) {
-  let damage = player.strongAttack();
-  wizard.loseHP(damage);
+let player1;
+let wizard1;
+
+export function playerStrongAttack(player1, wizard1) {
+  let damage = player1.strongAttack();
+  wizard1.loseHP(damage);
 }
 
-export function playerWeakAttack(player, wizard) {
-  let damage = player.weakAttack();
-  wizard.loseHP(damage);
+export function playerWeakAttack(player1, wizard1) {
+  let damage = player1.weakAttack();
+  wizard1.loseHP(damage);
 }
 
-export function wizardAttack(player, wizard) {
-  let popUpDamage = wizard.popUpAttack();
-  player.loseHP(popUpDamage);
+export function wizardAttack(player1, wizard1) {
+  let popUpDamage = wizard1.popUpAttack();
+  player1.loseHP(popUpDamage);
 }
 
 export function wizardPopUpAttack(targetOutput) {
-    wizardAttack(player, wizard);
-    player.death(targetOutput);
+    wizardAttack(player1, wizard1);
+    player1.death(targetOutput);
     // pop-up alerts
 }

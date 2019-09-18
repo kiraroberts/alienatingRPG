@@ -60,7 +60,7 @@ $(document).ready(function() {
     let wizard = new PopUpWizard();
     setInterval(function() {
       wizardPopUpAttack($('#game-over'));
-      console.log('wizard has attacked', )
+      console.log('wizard has attacked', player.hp);
     }, 3500);
   
     $('#strong-attack').click(function() {
@@ -71,7 +71,7 @@ $(document).ready(function() {
         $('.wizard-dead').show();
         $('.wizard-dead').fadeOut(1000);
         $(".levelTwoComplete").fadeIn(1500);
-      };
+      }
     });
     
     $('#player-weak-attack').click(function() {
@@ -82,7 +82,7 @@ $(document).ready(function() {
         $('.wizard-dead').show();
         $('.wizard-dead').fadeOut(1000);
         $(".levelTwoComplete").fadeIn(1500);
-      };
+      }
     });
  
   $(".lvl2next").click(function() {
