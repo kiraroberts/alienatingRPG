@@ -1,0 +1,184 @@
+
+.hat{
+  position: relative;
+  left: 100px;
+  width: 0;
+  height: 300px;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid purple;
+}
+.face {
+  width: 100px;
+  height: 100px;
+  background: pink;
+  border-radius: 50% / 100%;
+
+}
+
+.eye {
+  width: 10px;
+  height: 40px;
+  background: black;
+  border-radius: 50%;
+  margin-left: 21%;
+  border: solid white;
+  border-width: 3px;
+  color: black;
+}
+
+.head {
+
+  position: relative;
+  right: 25px;
+
+
+}
+
+.wizard {
+  width: 300px;
+  animation: bounceNslide 5s infinite;
+}
+
+.mustache {
+  position: relative;
+  top: -10px;
+  height: 20px;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 18px solid darkgray;
+}
+
+.beard {
+  width: 0;
+  height: 0;
+  border: 50px solid transparent;
+  border-bottom: 20px solid darkgray;
+  position: relative;
+  top: -60px;
+  right: 15px;
+  text-align: center;
+
+}
+.beard:after {
+
+  content: '';
+  position: absolute;
+  left: -50px;
+  top: 20px;
+  width: 0;
+  height: 0;
+  border: 50px solid transparent;
+  border-top: 70px solid darkgray;
+}
+.robes{
+  width: 115px;
+  background: purple;
+  height: 150px;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
+}
+
+.bod {
+  width: 200px;
+  margin-left: 75px;
+}
+
+.arms {
+  height: 125px;
+  width: 10px;
+  background: purple;
+  /* border: 3px solid black; */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.cloud, .cloudshadow {
+	width: 350px; height: 120px;
+	background: lightgray;
+	border-radius: 100px;
+	position: relative;
+
+}
+.cloud:after, .cloud:before, .cloudshadow:after, .cloudshadow:before {
+	content: '';
+	position: absolute;
+	background: lightgray;
+	z-index: 1
+}
+.cloudshadow, .cloudshadow:after, .cloudshadow:before {
+  margin: 0;
+  box-shadow: 0 0 25px #2c3e50;
+  z-index: -99;
+}
+.cloud:after, .cloudshadow:after {
+	width: 100px; height: 100px;
+	top: -50px; left: 50px;
+	border-radius: 100px;
+}
+.cloud:before, .cloudshadow:before  {
+	width: 180px; height: 180px;
+	top: -90px; right: 50px;
+	border-radius: 200px;
+}
+
+
+@keyframes bounceNslide {
+  0%, 100% {
+    top: 0;
+    left: 75px;
+
+  }
+  50% {
+
+    transform: translateY(25px);
+
+  }
+  25%, 75% {
+    top: 100px;
+
+    transform: translateY(50px);
+
+  }
+}
+
+@keyframes rotate-90-top-cw {
+  0% {
+    transform: rotate(0);
+    transform-origin: top;
+  }
+  100% {
+    transform: rotate(90deg);
+    transform-origin: top;
+  }
+}
+
+.wand {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50px;
+  height: 10px;
+  background: gold;
+  z-index: 5;
+  top: -10px;
+  left: -20px;
+}
+.wandTip{
+  width: 25px;
+  height: 25px;
+  background: gold;
+  border-radius: 50%;
+  position: relative;
+  top: -9px;
+  left:-15px
+}
+
+.left-arm {
+  animation: rotate-90-top-cw 0.8s ease-in-out 2s infinite alternate both;
+  position: absolute;
+}
+
+.right-arm {
+  position: absolute;
+}
