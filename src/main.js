@@ -1,8 +1,9 @@
 import { Game } from './alienatingRPG.js';
 import { Player } from './alienatingRPG.js';
+
+import { LoadingBar } from './loading-bar.js';
 import { PopUpWizard } from './alienatingRPG.js';
 import { playerStrongAttack, playerWeakAttack, wizardAttack } from './combat.js';
-
 
 import $ from 'jquery';
 import 'bootstrap';
@@ -11,10 +12,14 @@ import './../css/styles.css';
 import './../css/wizard.css';
 import './../css/loading-bar.css';
 
-
-
 $(document).ready(function() {
+  $('#barButton').click(function() {
+    let loadingBar = new LoadingBar();
+    loadingBar.startLoadingBar();
+  });
+
   // $('.start-game').show();
+  
   $('.start-game').click(function() {
   let game = new Game();
   // hide start screen &
@@ -76,8 +81,6 @@ $(document).ready(function() {
   // if player loses dice roll show game over screen/ if player wins show credits lol
 });
 
-
-
 //LEVEL UP MODAL function
 
 const modal = document.getElementById("levelUpModal");
@@ -91,4 +94,3 @@ setInterval(function() {
 span.onclick = function() {
   modal.style.display = "none";
 }
-
