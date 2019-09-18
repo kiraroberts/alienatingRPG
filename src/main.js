@@ -1,9 +1,9 @@
 import { Game } from './alienatingRPG.js';
 import { Player } from './alienatingRPG.js';
-import { PopUpWizard } from './../src/alienatingRPG.js';
-import { playerStrongAttack } from './../src/combat.js';
-import { playerWeakAttack } from './../src/combat.js';
-import { wizardAttack } from './../src/combat.js';
+import { PopUpWizard } from './src/alienatingRPG.js';
+import { playerStrongAttack } from './src/combat.js';
+import { playerWeakAttack } from './src/combat.js';
+import { wizardAttack } from './src/combat.js';
 
 import $ from 'jquery';
 import 'bootstrap';
@@ -11,6 +11,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './../css/styles.css';
 import './../css/wizard.css';
 import './../css/loading-bar.css';
+
 
 
 $(document).ready(function() {
@@ -36,6 +37,9 @@ $(document).ready(function() {
   // })
   // call level two combat function/ all pop up wizard fight methods here
   let wizard = new PopUpWizard();
+  console.log('player strong attack', playerStrongAttack);
+  console.log('player weak attack', playerWeakAttack);
+  console.log('wizard attack', wizardAttack);
   // $('#strong-attack').click(function() {
   //   playerStrongAttack(player, wizard);
   // });
