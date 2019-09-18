@@ -1,9 +1,7 @@
 import { Game } from './../src/alienatingRPG.js';
 import { Player } from './../src/alienatingRPG.js';
 import { PopUpWizard } from './../src/alienatingRPG.js';
-import { playerStrongAttack } from './../src/combat.js';
-// import { playerWeakAttack } from './../src/combat.js';
-// import { wizardAttack } from './../src/combat.js';
+import { playerStrongAttack, playerWeakAttack, wizardAttack } from './../src/combat.js';
 
 describe('player and wizard attacks', function() {
   let player;
@@ -13,20 +11,20 @@ describe('player and wizard attacks', function() {
     wizard = new PopUpWizard();
   });
 
-it('should test that wizard is losing hp on attack', function() {
-  playerStrongAttack(player, wizard);
-  expect(wizard.hp).toEqual(7);
-});
+  it('should test that wizard is losing hp on attack', function() {
+    playerStrongAttack(player, wizard);
+    expect(wizard.hp).toEqual(7);
+  });
 
-// it('should test that wizard is losing hp on attack', function() {
+  it('should test that wizard is losing hp on attack', function() {
+    playerWeakAttack(player, wizard);
+    expect(wizard.hp).toEqual(9);
+  });
 
-// });
-
-// it('should test that wizard is losing hp on attack', function() {
-
-// });
-
-
+  it('should test that wizard is losing hp on attack', function() {
+    wizardAttack(player, wizard);
+    expect(player.hp).toEqual(8);
+  });
 });
 
 
@@ -37,7 +35,7 @@ describe('Player', function() {
         bot = new Player('bot');
     });
 
-//  initial test, should fail
+
 it('player should have name, hp, level, and attack stats', function() {
     expect(bot).toEqual(jasmine.objectContaining({name: 'bot',
     hp: 10,
@@ -47,7 +45,7 @@ it('player should have name, hp, level, and attack stats', function() {
 }));
 });
 
-// this method runs with Math.random, it WILL return a 0 value sometimes
+
 it('attack strong should assign 3 to the damage variable', function() {
     let damage = bot.strongAttack();
     expect(damage).toEqual(3);
@@ -58,12 +56,6 @@ it('should reset the hp when called', function() {
     bot.resetHP();
     expect(bot.hp).toEqual(10);
 });
-
-// it('it evaluates the hp has hit 0', function() {
-//     bot.hp = 0;
-//     bot.death();
-//     expect().toEqual('gg uninstall');
-// });
 
 it('should lose hp when attacked', function() {
     bot.hp = 10;
