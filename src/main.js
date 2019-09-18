@@ -5,19 +5,20 @@ import { PopUpWizard } from './../src/alienatingRPG.js';
 import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles.css';
-import './wizard.css';
+import './../css/styles.css';
+import './../css/wizard.css';
+import './../css/loading-bar.css';
 
 
 $(document).ready(function() {
-    console.log(Player);
-    console.log(Game);
-    console.log(PopUpWizard);
-    // $('.start-game').show();
+  console.log(Player);
+  console.log(Game);
+  console.log(PopUpWizard);
+  // $('.start-game').show();
   $('.start-game').click(function() {
-    // let game = new Game();
-    // hide start screen &
-    // fade-in character creator
+  // let game = new Game();
+  // hide start screen &
+  // fade-in character creator
   });
 
   // $('.character-creator').click(function() {
@@ -33,14 +34,12 @@ $(document).ready(function() {
   // $(".levelOneComplete").click(function() {
   // hide level one complete screen, show level two/pop up wizard
   // })
-  // call level two combat function/ all pop up wizard fight methods here
+  // call level two combat function/ all pop up wizard fight methods here (loewy working on this)
   // when pop up wizard or play dies show level two completion screen or game over screen
   // $(".levelTwoComplete").click(function() {
   // hide level two complete screen/ show final boss "dice roll"/ also any text screens
   // })
   // if player loses dice roll show game over screen/ if player wins show credits lol
-
-
 });
 
 

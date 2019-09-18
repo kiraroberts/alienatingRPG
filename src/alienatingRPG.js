@@ -2,8 +2,6 @@ export class Game {
   constructor() {
     this.level = 0;
     this.characters = [];
-    // this.playerTurn = true;
-    // this.npcTurn = false;
   }
 
 nextLevel() {
