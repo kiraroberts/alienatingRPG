@@ -24,7 +24,7 @@ $(document).ready(function() {
   // right swipe is what calls this function
   // creates a variable to house the players name (and pass picture to display)
   // let player = new Player('x')
-  // 
+  //
   // confirm character choice button assigns character to display variable and hides character creation screen/show level 1
   // })
   // loading screen/level 1 function calls
@@ -44,6 +44,17 @@ $(document).ready(function() {
 });
 
 
+//LEVEL UP MODAL function
 
+const modal = document.getElementById("levelUpModal");
 
-    
+const span = document.getElementByClassName("close")[0];
+
+setInterval(function() {
+  modal.style.display = "block";
+}, Math.floor(Math.random() * 60000));
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
