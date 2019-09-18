@@ -15,7 +15,8 @@ export function wizardAttack(player, wizard) {
   player.loseHP(popUpDamage);
 }
 
-
-
-
-
+export function wizardPopUpAttack(targetOutput) {
+    wizardAttack(player, wizard);
+    player.death(targetOutput);
+    // pop-up alerts
+}
