@@ -2,8 +2,6 @@ export class Game {
   constructor() {
     this.level = 0;
     this.characters = [];
-    // this.playerTurn = true;
-    // this.npcTurn = false;
   }
 
 nextLevel() {
@@ -19,6 +17,11 @@ export class Player {
     this.playerLevel = 1;
     this.attackStrong = 3;
     this.attackWeak = 1;
+  }
+
+  weakAttack() {
+    let damage = this.attackWeak;
+    return damage;
   }
 
   strongAttack() {
