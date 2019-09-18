@@ -48,13 +48,6 @@ export class Player {
       // button logic
     }
   }
-
-  levelUp() {
-    setInterval(function() {
-      alert("You leveled up!");
-    }, Math.floor(Math.random() * 60000));
-  }
-
 }
 
 export class PopUpWizard {
