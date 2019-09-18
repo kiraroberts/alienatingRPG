@@ -25,9 +25,9 @@ $(document).ready(function() {
   // $('.character-creator').click(function() {
   // right swipe is what calls this function
   // creates a variable to house the players name (and pass picture to display)
-  let player = new Player('x')
+  let player = new Player('bot')
   // 
-  // confirm character choice button assigns character to display variable and hides character creation screen/show level 1
+ // confirm character choice button assigns character to display variable and hides character creation screen/show level 1
   // })
   // loading screen/level 1 function calls
   // end of function hides level 1 and shows level one complete screen
@@ -57,6 +57,17 @@ $(document).ready(function() {
 });
 
 
+//LEVEL UP MODAL function
 
+const modal = document.getElementById("levelUpModal");
 
-    
+const span = document.getElementByClassName("close")[0];
+
+setInterval(function() {
+  modal.style.display = "block";
+}, Math.floor(Math.random() * 60000));
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
