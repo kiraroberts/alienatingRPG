@@ -1,6 +1,33 @@
 import { Game } from './../src/alienatingRPG.js';
 import { Player } from './../src/alienatingRPG.js';
 import { PopUpWizard } from './../src/alienatingRPG.js';
+import { playerStrongAttack } from './../src/combat.js';
+// import { playerWeakAttack } from './../src/combat.js';
+// import { wizardAttack } from './../src/combat.js';
+
+describe('player and wizard attacks', function() {
+  let player;
+  let wizard;
+  beforeEach(function() {
+    player = new Player('player');
+    wizard = new PopUpWizard();
+  });
+
+it('should test that wizard is losing hp on attack', function() {
+  playerStrongAttack(player, wizard);
+  expect(wizard.hp).toEqual(7);
+});
+
+// it('should test that wizard is losing hp on attack', function() {
+
+// });
+
+// it('should test that wizard is losing hp on attack', function() {
+
+// });
+
+
+});
 
 
 describe('Player', function() {

@@ -1,7 +1,7 @@
 export class LoadingBar {
   startLoadingBar() {
     let bar = document.getElementById("loadingBar");
-    const width = 0; //starting point upon click
+    let width = 0; //starting point upon click
     let id = setInterval(frame, 200); //(function, delay between next load in ms) n / 10 = time to load bar in seconds
     function frame() {
       if (width >= 100) {
@@ -40,7 +40,7 @@ export class LoadingBar {
       }
     }
   }
+}
 
 
   // fuck with a real progress bar here lmao - www.w3schools.com/howto/tryit.asp?filename=tryhow_js_progressbar_label_js
-  //
