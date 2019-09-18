@@ -72,5 +72,10 @@ export class PopUpWizard {
     // set timer for attacks to happen in given interval (maybe random interval?)
   }
 
-  // method to begin animation
+  wizardDeath(targetOutput){
+    if (this.hp <= 0) {
+      (targetOutput).html('You defeated the monsterous Pop-Up Wizard!');
+      return true;
+    }
+  }
 }

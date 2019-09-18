@@ -15,6 +15,14 @@ button {
   border-radius: 5px;
 }
 
+
+.levelTwoComplete {
+  display: none;
+}
+
+.pig-dice {
+  display: none;
+}
 #levelUpModal {
   display: none;
   position: fixed;
@@ -46,4 +54,5 @@ button {
   color: black;
   text-decoration: none;
   cursor: pointer;
+
 }
