@@ -54,11 +54,12 @@
 
 .wizard-dead {
   width: 300px;
-  /* display: none; */
+  display: none;
 }
 .wizard-live {
+  position: relative;
   width: 300px;
-  animation: bounceNslide 5s infinite;
+  animation: bounceNslide 5s alternate infinite 5s;
   display: none;
 }
 
@@ -69,6 +70,16 @@
   border-left: 25px solid transparent;
   border-right: 25px solid transparent;
   border-bottom: 18px solid darkgray;
+  animation: talkStache 100ms alternate 50;
+}
+
+@keyframes talkStache {
+  0% {
+    transform: translateY(3px);
+  }
+}
+100% {
+  transform: translateY(-10px);
 }
 
 .beard {
@@ -110,7 +121,6 @@
   height: 125px;
   width: 10px;
   background: purple;
-  /* border: 3px solid black; */
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -155,12 +165,11 @@
     left: 75px;
   }
   50% {
-    transform: translateY(25px);
-    left: 150px
+    transform: translate(-25%, -50%);
   }
   25%, 75% {
-    top: 100px;
-    transform: translateY(50px);
+    right: 100px;
+    transform: translate(-75%, -10%);
   }
 }
 
@@ -198,7 +207,7 @@
 }
 
 .left-arm {
-  animation: rotate-90-top-cw 0.8s ease-in-out 2s infinite alternate both;
+  animation: rotate-90-top-cw 0.8s ease-in-out 5s infinite alternate both;
   position: absolute;
 }
 

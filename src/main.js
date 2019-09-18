@@ -1,5 +1,6 @@
 import { Game } from './alienatingRPG.js';
 import { Player } from './alienatingRPG.js';
+import { LoadingBar } from './loading-bar.js';
 import { PopUpWizard } from './alienatingRPG.js';
 import { playerStrongAttack, playerWeakAttack, wizardAttack, wizardPopUpAttack } from './combat.js';
 
@@ -10,9 +11,14 @@ import './../css/styles.css';
 import './../css/wizard.css';
 import './../css/loading-bar.css';
 
-
 $(document).ready(function() {
+  $('#barButton').click(function() {
+    let loadingBar = new LoadingBar();
+    loadingBar.startLoadingBar();
+  });
+
   // $('.start-game').show();
+  
   $('.start-game').click(function() {
   let game = new Game();
   // hide start screen &
