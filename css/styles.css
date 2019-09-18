@@ -14,3 +14,11 @@ button {
   margin: 3px;
   border-radius: 5px;
 }
+
+.levelTwoComplete {
+  display: none;
+}
+
+.pig-dice {
+  display: none;
+}
