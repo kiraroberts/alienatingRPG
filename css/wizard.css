@@ -54,7 +54,7 @@
 
 .wizard-dead {
   width: 300px;
-  /* display: none; */
+  display: none;
 }
 .wizard-live {
   width: 300px;
