@@ -27,17 +27,39 @@
   color: black;
 }
 
-.head {
-
+.head-live {
   position: relative;
   right: 25px;
+}
+.head-dead {
+  position: relative;
+  right: 25px;
+  animation: wizardDeath 5s;
+}
 
+@keyframes wizardDeath {
+  0% {
+    transform: rotate(-0deg);
+    position: relative;
+    right: 0;
+  }
+  100% {
+    transform: rotate(360deg);
+    position: relative;
+    right: -1000px;
+    top: 500px
+  }
 
 }
 
-.wizard {
+.wizard-dead {
+  width: 300px;
+  /* display: none; */
+}
+.wizard-live {
   width: 300px;
   animation: bounceNslide 5s infinite;
+  display: none;
 }
 
 .mustache {
@@ -121,24 +143,24 @@
 	top: -90px; right: 50px;
 	border-radius: 200px;
 }
-
+.pop-up-wizard {
+  position: relative;
+  right: -1150px;
+  bottom: -400px
+}
 
 @keyframes bounceNslide {
   0%, 100% {
     top: 0;
     left: 75px;
-
   }
   50% {
-
     transform: translateY(25px);
-
+    left: 150px
   }
   25%, 75% {
     top: 100px;
-
     transform: translateY(50px);
-
   }
 }
 
@@ -152,6 +174,7 @@
     transform-origin: top;
   }
 }
+
 
 .wand {
   position: relative;

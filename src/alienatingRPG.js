@@ -2,8 +2,6 @@ export class Game {
   constructor() {
     this.level = 0;
     this.characters = [];
-    // this.playerTurn = true;
-    // this.npcTurn = false;
   }
 
 nextLevel() {
@@ -21,10 +19,15 @@ export class Player {
     this.attackWeak = 1;
   }
 
+  weakAttack() {
+    let damage = this.attackWeak;
+    return damage;
+  }
+
   strongAttack() {
     let chance = Math.floor(Math.random() * 100);
     if (chance < 61) {
-      let damage = this.attackStrong; 
+      let damage = this.attackStrong;
       return damage;
     } else {
       // display text 'attack missed'
@@ -54,7 +57,7 @@ export class PopUpWizard {
   constructor() {
     this.hp = 10;
     this.attack = 2;
-  
+
   }
 
   loseHP(damage) {
@@ -69,6 +72,10 @@ export class PopUpWizard {
     // set timer for attacks to happen in given interval (maybe random interval?)
   }
 
-  // method to begin animation
+  wizardDeath(targetOutput){
+    if (this.hp <= 0) {
+      (targetOutput).html('You defeated the monsterous Pop-Up Wizard!');
+      return true;
+    }
+  }
 }
-

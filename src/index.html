@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <title>Alienating RPG</title>
-  <!-- <link rel="stylesheet" type="text/css" href="./styles.css">
-    <link rel="stylesheet" type="text/css" href="./wizard.css"> -->
-
-</head>
-
-<body>
-  <!-- <img src="https://images.unsplash.com/photo-1561912847-95100ed8646c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"> -->
-  <div class="container">
-    <div class="card fixed-bottom">
+  <head>
+    <title>Alienating RPG</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card fixed-bottom">
       <div class="card-body">
         <div class="row">
           <div class="col-md-3 mx-auto">
@@ -90,17 +84,18 @@
   </div>
 
 
-  <div class="pop-up-wizard container">
-    <div class="wizard">
-      <div class="head">
-        <div class="hat">
-          <div class="stars">
-          </div>
-        </div>
-        <div style="position:relative; z-index:5" class="face container">
-          <div class="eyes row">
-            <span class="eye"></span><span class="eye"></span>
-            <!-- <div class="col eye">
+
+      <div class="pop-up-wizard container">
+        <div class="wizard-live">
+          <div class="head-live">
+            <div class="hat">
+              <div class="stars">
+              </div>
+            </div>
+            <div style="position:relative; z-index:5" class="face container">
+              <div class="eyes row">
+                <span class="eye"></span><span class="eye"></span>
+                <!-- <div class="col eye">
                 </div>
 
                 <div class="eye col">
@@ -132,6 +127,48 @@
 
           </div>
         </div>
+
+        <div class="wizard-dead">
+          <div class="head-dead">
+            <div class="hat">
+              <div class="stars">
+              </div>
+            </div>
+            <div style="position:relative; z-index:5" class="face container">
+              <div class="eyes row">
+                <span class="eye"></span><span class="eye"></span>
+                <!-- <div class="col eye">
+                </div>
+
+                <div class="eye col">
+                </div> -->
+              </div>
+              <br>
+
+              <div class="mustache">
+              </div>
+
+              <div class="beard">
+
+              </div>
+            </div>
+          </div>
+          <div class="bod ">
+            <div class="">
+
+
+              <div class="col-md-6 robes">
+
+              </div>
+            </div>
+          </div>
+          <div class="cloud">
+            <div class="cloudshadow"></div>
+          </div>
+        </div>
+        <div class="levelTwoComplete">
+          <button type="button" class="btn btn-dark lvl2next" name="button"></button>
+        </div>
       </div>
       <div class="cloud">
         <div class="cloudshadow"></div>
@@ -149,14 +186,20 @@
     <!-- final level css elements -->
   </div>
 
-  <div class="store">
-    <!-- store css elements -->
-  </div>
-  <div id="game-over">
-    <!-- game over display message-->
-  </div>
 
-  </div>
-</body>
-
+      <div class="store">
+        <!-- store css elements -->
+      </div>
+      <div id="game-over">
+        <!-- game over display message-->
+      </div>
+      <div id="levelUpModal" class="modal">
+        <div class="modal-content">
+          <span class="close">$times;</span>
+          <p>You leveled up!</p>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
+
