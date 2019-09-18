@@ -1,4 +1,74 @@
 /* start CSS for character-creator screen*/
 #character-creator-page {
   background-color: #2652ab;
+  background: make it fill whole thing
+  position:absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  height:100%;
+  width:100%;
+  font-weight: 100;
+  font-family: Helvetica;
+}
+#character-card {
+  border: solid;
+  border-color: #2652ab;
+  border-width: 2em;
+}
+#right {
+  background-color: green;
+}
+#left {
+  background-color: #e8533c;
+}
+.match-percent {
+  border-radius: 50%;
+  border-color: #deb309;
+  border-style: solid;
+  border-width: bold;
+  border-spacing: inherit;
+  display: inline-block;
+  text-align: center;
+  color: #deb309;
+  padding: .5em;
+  margin: .5em;
+}
+.enemy-percent {
+  border-radius: 50%;
+  border-color: grey;
+  border-style: solid;
+  border-width: bold;
+  border-spacing: inherit;
+  display: inline-block;
+  text-align: center;
+  color: grey;
+  padding: .5em;
+  margin: .5em;
+
+}
+#border-bottom {
+  text-align: justify;
+  border-bottom-style: solid;
+  border-bottom-width: thin;
+  border-bottom-color: #2652ab;
+  padding: 0px;
+  word-spacing: 4em;
+
+}
+.profpic {
+  padding: 1em;
+}
+.profile-header {
+  font-size: 14px;
+  font-weight: bold;
+
+}
+.profile-text {
+  font-size: 14px;
+}
+a.disabled {
+  pointer-events: none;
+  cursor: default;
 }
