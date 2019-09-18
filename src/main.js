@@ -1,9 +1,9 @@
 import { Game } from './alienatingRPG.js';
 import { Player } from './alienatingRPG.js';
-import { PopUpWizard } from './src/alienatingRPG.js';
-import { playerStrongAttack } from './src/combat.js';
-import { playerWeakAttack } from './src/combat.js';
-import { wizardAttack } from './src/combat.js';
+import { PopUpWizard } from './alienatingRPG.js';
+import { playerStrongAttack } from './combat.js';
+import { playerWeakAttack } from './combat.js';
+import { wizardAttack } from './combat.js';
 
 import $ from 'jquery';
 import 'bootstrap';
@@ -66,7 +66,6 @@ const span = document.getElementByClassName("close")[0];
 setInterval(function() {
   modal.style.display = "block";
 }, Math.floor(Math.random() * 60000));
-}
 
 span.onclick = function() {
   modal.style.display = "none";
