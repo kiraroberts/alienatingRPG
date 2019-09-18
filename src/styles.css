@@ -1,24 +1,23 @@
 /* start CSS for character-creator screen*/
-#character-creator-page {
+.character-creator-page {
   background-color: #2652ab;
-  background: make it fill whole thing
-  position:absolute;
-  top:0;
-  left:0;
-  bottom:0;
-  right:0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   height:100%;
   width:100%;
-  font-weight: 100;
-  font-family: Helvetica;
+  background-position: center;
+  background-repeat: no-repeat;
 }
+
 #character-card {
   border: solid;
   border-color: #2652ab;
-  border-width: 2em;
+  border-width: 3em;
 }
 #right {
-  background-color: green;
+  background-color: #79ba65;
 }
 #left {
   background-color: #e8533c;
@@ -34,6 +33,7 @@
   color: #deb309;
   padding: .5em;
   margin: .5em;
+  font-family: Helvetica;
 }
 .enemy-percent {
   border-radius: 50%;
@@ -46,6 +46,7 @@
   color: grey;
   padding: .5em;
   margin: .5em;
+  font-family: Helvetica;
 
 }
 #border-bottom {
@@ -55,6 +56,7 @@
   border-bottom-color: #2652ab;
   padding: 0px;
   word-spacing: 4em;
+  font-family: Helvetica;
 
 }
 .profpic {
@@ -63,12 +65,29 @@
 .profile-header {
   font-size: 14px;
   font-weight: bold;
+  font-family: courier;
 
 }
 .profile-text {
   font-size: 14px;
+  font-family: courier;
 }
 a.disabled {
   pointer-events: none;
   cursor: default;
+}
+.profile-logopart1 {
+  font-style: italic;
+  font-weight: bold;
+  letter-spacing: .1em;
+  font-family: sans-serif;
+  color: white;
+  text-shadow: 2px 2px 0 #2652ab, 2px -2px 0 #2652ab, -2px 2px 0 #2652ab, -2px -2px 0 #2652ab, 2px 0px 0 #2652ab, 0px 2px 0 #2652ab, -2px 0px 0 #2652ab, 0px -2px 0 #2652ab;
+}
+.profile-logopart2 {
+  font-style: italic;
+  font-weight: bold;
+  font-family: sans-serif;
+  color: white;
+  text-shadow: 2px 2px 0 #6b91db, 2px -2px 0 #6b91db, -2px 2px 0 #6b91db, -2px -2px 0 #6b91db, 2px 0px 0 #6b91db, 0px 2px 0 #6b91db, -2px 0px 0 #6b91db, 0px -2px 0 #6b91db;
 }
