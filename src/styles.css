@@ -11,15 +11,15 @@
   background-repeat: no-repeat;
 }
 
-#character-card {
+#character-card1 {
   border: solid;
   border-color: #2652ab;
-  border-width: 3em;
+  border-width: 4em;
 }
-#right {
+#swipe-right {
   background-color: #79ba65;
 }
-#left {
+#swipe-left {
   background-color: #e8533c;
 }
 .match-percent {
@@ -63,14 +63,17 @@
   padding: 1em;
 }
 .profile-header {
-  font-size: 14px;
+  color: #373738;
+  font-size: 12px;
   font-weight: bold;
-  font-family: courier;
+  font-family: Helvetica;
+  padding-top: .5em;
 
 }
 .profile-text {
-  font-size: 14px;
-  font-family: courier;
+  color: #373738;
+  font-size: 12px;
+  font-family: Helvetica;
 }
 a.disabled {
   pointer-events: none;
@@ -78,16 +81,18 @@ a.disabled {
 }
 .profile-logopart1 {
   font-style: italic;
+  font-size: 36px;
   font-weight: bold;
   letter-spacing: .1em;
   font-family: sans-serif;
   color: white;
-  text-shadow: 2px 2px 0 #2652ab, 2px -2px 0 #2652ab, -2px 2px 0 #2652ab, -2px -2px 0 #2652ab, 2px 0px 0 #2652ab, 0px 2px 0 #2652ab, -2px 0px 0 #2652ab, 0px -2px 0 #2652ab;
+  text-shadow: 4px 4px 0 #2652ab, 4px -4px 0 #2652ab, -4px 4px 0 #2652ab, -4px -4px 0 #2652ab, 4px 0px 0 #2652ab, 0px 4px 0 #2652ab, -4px 0px 0 #2652ab, 0px -4px 0 #2652ab;
 }
 .profile-logopart2 {
+  font-size: 34px;
   font-style: italic;
   font-weight: bold;
   font-family: sans-serif;
   color: white;
-  text-shadow: 2px 2px 0 #6b91db, 2px -2px 0 #6b91db, -2px 2px 0 #6b91db, -2px -2px 0 #6b91db, 2px 0px 0 #6b91db, 0px 2px 0 #6b91db, -2px 0px 0 #6b91db, 0px -2px 0 #6b91db;
+  text-shadow: 4px 4px 0 #6b91db, 4px -4px 0 #6b91db, -4px 4px 0 #6b91db, -4px -4px 0 #6b91db, 4px 0px 0 #6b91db, 0px 4px 0 #6b91db, -4px 0px 0 #6b91db, 0px -4px 0 #6b91db;
 }
