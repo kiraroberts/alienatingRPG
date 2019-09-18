@@ -1,15 +1,20 @@
 import { Game } from './alienatingRPG.js';
 import { Player } from './alienatingRPG.js';
 import { PopUpWizard } from './../src/alienatingRPG.js';
+import { LoadingBar } from './../src/loading-bar.js'
 
 import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles.css';
-import './wizard.css';
-
+import './../css/styles.css';
+import './../css/wizard.css';
+import './../css/loading-bar.css';
 
 $(document).ready(function() {
+  $('#barButton').click(function() {
+    let loadingBar = new LoadingBar();
+    loadingBar.startLoadingBar();
+  });
     console.log(Player);
     console.log(Game);
     console.log(PopUpWizard);
@@ -24,7 +29,7 @@ $(document).ready(function() {
   // right swipe is what calls this function
   // creates a variable to house the players name (and pass picture to display)
   // let player = new Player('x')
-  // 
+  //
   // confirm character choice button assigns character to display variable and hides character creation screen/show level 1
   // })
   // loading screen/level 1 function calls
@@ -42,8 +47,3 @@ $(document).ready(function() {
 
 
 });
-
-
-
-
-    

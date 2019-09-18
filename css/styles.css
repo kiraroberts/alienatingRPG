@@ -14,3 +14,7 @@ button {
   margin: 3px;
   border-radius: 5px;
 }
+
+.pop-up-wizard {
+  display: none;
+}
