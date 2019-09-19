@@ -1,0 +1,50 @@
+.titleHeader {
+width:auto;
+font-family: fantasy;
+color: cyan;
+animation: pulseNshake 2s cubic-bezier(.36,.07,.19,.97) alternate infinite;
+transform: translate3d(0, 0, 0);
+backface-visibility: hidden;
+perspective: 500px;
+position: relative;
+bottom: -45%;
+text-shadow: 2px 2px 20px black;
+}
+
+@keyframes pulseNshake {
+  10%, 90% {
+   transform: translate3d(-1px, 0, 0);
+   transform: scale(1.2, 0.8);
+ }
+
+ 20%, 80% {
+   transform: translate3d(2px, 0, 0);
+   transform: scale(1.3, 2)
+ }
+
+ 30%, 50%, 70% {
+   transform: translate3d(-4px, 0, 0);
+   transform: scale(.5, .5);
+   top: 5%;
+   left: 15%;
+ }
+
+ 40%, 60% {
+   transform: translate3d(4px, 0, 0);
+   transform: scale(.2, .2);
+   right: 10%;
+   bottom: 10%
+ }
+}
+
+.title-screen {
+  background: linear-gradient(to bottom, #544a7d, #ffd452);
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+
+}
+.byUs {
+  position: relative;
+  bottom: -70%
+}

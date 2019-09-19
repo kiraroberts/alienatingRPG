@@ -23,6 +23,11 @@ button {
 .pig-dice {
   display: none;
 }
+
+.main-body{
+  display: none;
+}
+
 #levelUpModal {
   display: none;
   position: fixed;

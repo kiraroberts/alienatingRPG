@@ -8,10 +8,16 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './../css/styles.css';
+import './../css/title-screen.css'
 import './../css/wizard.css';
 import './../css/loading-bar.css';
 
+
 $(document).ready(function() {
+  $('.playgame').click(function(){
+    $('.title-screen').fadeOut()
+    $('.main-body').fadeIn(1000)
+  })
   $('#barButton').click(function() {
     let loadingBar = new LoadingBar();
     loadingBar.startLoadingBar();
@@ -30,13 +36,13 @@ $(document).ready(function() {
 
   // LEVEL UP MODAL FUNCTION, SHOULD BE RUNNING IN BACKGROUND
   const modal = document.getElementById("levelUpModal");
-  
+
   const span = document.getElementByClassName("close")[0];
-  
+
   setInterval(function() {
   modal.style.display = "block";
   }, Math.floor(Math.random() * 60000));
-  
+
   span.onclick = function() {
   modal.style.display = "none";
   }
@@ -45,7 +51,7 @@ $(document).ready(function() {
    // $('.character-creator').click(function() {
   // right swipe is what calls this function
   // creates a variable to house the players name (and pass picture to display)
-  
+
   let player = new Player('playerName');
 
   // confirm character choice button assigns character to display variable and hides character creation screen/show level 1
@@ -64,9 +70,9 @@ $(document).ready(function() {
 
     setInterval(function() {
       wizardPopUpAttack($('#game-over'));
-      console.log('wizard has attacked', )
+      console.log('wizard has attacked', player.hp);
     }, 3500);
-  
+
     $('#strong-attack').click(function() {
       playerStrongAttack(player, wizard);
       if (wizard.wizardDeath() === true) {
@@ -75,9 +81,9 @@ $(document).ready(function() {
         $('.wizard-dead').show();
         $('.wizard-dead').fadeOut(1000);
         $(".levelTwoComplete").fadeIn(1500);
-      };
+      }
     });
-    
+
     $('#player-weak-attack').click(function() {
       playerWeakAttack(player, wizard);
       if (wizard.wizardDeath() === true) {
@@ -86,20 +92,19 @@ $(document).ready(function() {
         $('.wizard-dead').show();
         $('.wizard-dead').fadeOut(1000);
         $(".levelTwoComplete").fadeIn(1500);
-      };
+      }
     });
- 
+
   $(".lvl2next").click(function() {
     $(".levelTwoComplete").fadeOut()
     $(".pig-dice").fadeIn();
- 
+
   })
   });
   });
-  
+
   // $(".levelTwoComplete").click(function() {
   // hide level two complete screen/ show final boss "dice roll"/ also any text screens
   // })
   // if player loses dice roll show game over screen/ if player wins show credits lol
 });
-
