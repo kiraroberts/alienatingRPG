@@ -2,7 +2,7 @@ import { Game } from './alienatingRPG.js';
 import { Player } from './alienatingRPG.js';
 import { LoadingBar } from './loading-bar.js';
 import { PopUpWizard } from './alienatingRPG.js';
-import { playerStrongAttack, playerWeakAttack, wizardAttack, wizardPopUpAttack } from './combat.js';
+import { playerStrongAttack, playerWeakAttack, wizardPopUpAttack } from './combat.js';
 
 import $ from 'jquery';
 import 'bootstrap';
@@ -27,6 +27,7 @@ $(document).ready(function() {
       }, 300);
 
     });
+    
   // QUIT GAME BUTTON
   $('#quit-game').click(function() {
     location.reload();
@@ -47,9 +48,6 @@ $(document).ready(function() {
 
 
   //Character Card Starts Here
-  let player = new Player('playerName');
-
-
     $("#character-card1").show();
     $("#character-card2").hide();
     $("#character-card3").hide();
@@ -61,7 +59,8 @@ $(document).ready(function() {
       $(".character-creator-page").fadeOut();
       $(".pop-up-wizard").show();
       $(".main-body").show();
-    });
+      });
+ 
     $("#swipe-right2").click(function(event) {
       characterId = 2;
       $(".character-creator-page").fadeOut();
@@ -99,7 +98,10 @@ $(document).ready(function() {
       $("#character-card1").show();
     });
 
-    // THIS BUTTON CONNECTS TO END OF LOADING SCREEN & BEGINS WIZARD LEVEL
+  // NAME NEEDS TO BE ASSIGNED HERE 
+ let player = new Player('playerName');
+    
+    // THIS BUTTON CONNECTS TO END OF CHARACTER SELECTION & BEGINS WIZARD LEVEL
      $(".wizardFight").click(function() {
       let wizard = new PopUpWizard();
       $(".wizardFight").fadeOut();
@@ -140,7 +142,6 @@ $(document).ready(function() {
   });
 })
 
-    // $(".levelTwoComplete").click(function() {
-    // hide level two complete screen/ show final boss "dice roll"/ also any text screens
-    // })
-    // if player loses dice roll show game over screen/ if player wins show credits lol
+
+});
+

@@ -37,7 +37,6 @@ export class LoadingBar {
       $('#loadingMessage3').hide();
     }
 
-
     if (randomNumber === 3) {
       $('#loadingMessage1').hide();
       $('#loadingMessage2').hide();
