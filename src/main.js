@@ -2,7 +2,8 @@ import { Game } from './alienatingRPG';
 import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles.css';
+import './../styles.css';
+import './../css/okcharacter-styles.css'
 
 
 
@@ -26,7 +27,7 @@ $(document).ready(function() {
   $("#swipe-right4").click(function(event) {
     characterId = 4;
   });
-  
+
   $("#swipe-left1").click(function(event) {
     $("#character-card1").hide();
     $("#character-card2").show();
