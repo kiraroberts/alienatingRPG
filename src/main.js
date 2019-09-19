@@ -16,6 +16,11 @@ $(document).ready(function() {
     let loadingBar = new LoadingBar();
     loadingBar.startLoadingBar();
   });
+// QUIT GAME BUTTON
+$('#quit-game').click(function() {
+  location.reload();
+});
+
 
   // $('.start-game').show();
   
