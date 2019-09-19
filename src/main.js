@@ -31,9 +31,6 @@ $('#quit-game').click(function() {
   location.reload();
 });
 
-
-  // $('.start-game').show();
-
   $('.start-game').click(function() {
   let game = new Game();
   // hide start screen &
