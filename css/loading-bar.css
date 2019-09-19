@@ -1,0 +1,26 @@
+#progressBar {
+  width: 100%;
+  background-color: #ddd;
+}
+
+#loadingBar {
+  width: 0%;
+  height: 30px;
+  background-color: #4CAF50;
+  text-align: right;
+  line-height: 30px;
+  color: white;
+}
+
+.message {
+  display: none;
+}
+
+.loading-screen {
+  position: relative;
+  top: 45%;
+  display: none;
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+}
