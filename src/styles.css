@@ -98,9 +98,12 @@ a.disabled {
 }
 .profile-logopart1 {
   font-style: italic;
+  background-color: #f296c9;
+  border-radius: 10%;
+  border-color: #f296c9;
   font-size: 36px;
   font-weight: bold;
-  letter-spacing: .1em;
+  letter-spacing: .2em;
   font-family: sans-serif;
   color: white;
   text-shadow: 4px 4px 0 #2652ab, 4px -4px 0 #2652ab, -4px 4px 0 #2652ab, -4px -4px 0 #2652ab, 4px 0px 0 #2652ab, 0px 4px 0 #2652ab, -4px 0px 0 #2652ab, 0px -4px 0 #2652ab;
