@@ -17,8 +17,8 @@
   border-width: 4em;
   border-bottom-width: 4em;
   border-bottom-color: #2652ab;
-  border-left-width: 6em;
-  border-right-width: 6em;
+  border-left-width: 4em;
+  border-right-width: 4em;
 }
 .swipe-right {
   background-color: #79ba65;
@@ -57,23 +57,32 @@
   padding: .5em;
   margin: .5em;
   font-family: Helvetica;
-
 }
+.online-status {
+    width: 1em;
+    height: 1em;
+    border-spacing: inherit;
+    border-width: thin;
+    border-color: #406335;
+    background-color: #79ba65;
+    border-radius: 50%;
+    float: right;
+  }
+
 #border-bottom {
   word-spacing: 5em;
   font-family: Helvetica;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: lighter;
 
 }
-.profpic {
-  padding: 1em;
-}
+
 .profile-header {
   color: #373738;
   font-size: 12px;
   font-weight: bold;
   font-family: Helvetica;
+  margin-bottom: 0;
   /* padding-top: .5em; */
 
 }
@@ -83,7 +92,7 @@
   font-weight: bold;
   font-family: Helvetica;
   padding-top: .5em;
-
+  margin-bottom: 0;
 }
 .profile-info {
   color: #2652ab;
@@ -96,6 +105,8 @@
   color: #373738;
   font-size: 12px;
   font-family: Helvetica;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 a.disabled {
   pointer-events: none;
