@@ -5,10 +5,10 @@ body {
   background-attachment: fixed;
 
 }
-/* .card {
+#footerCard {
   margin: 5px;
   background: rgba(50, 50, 50, 0.7);
-} */
+}
 
 button {
   margin: 3px;
