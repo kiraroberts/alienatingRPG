@@ -2,7 +2,7 @@ import { Game } from './alienatingRPG.js';
 import { Player } from './alienatingRPG.js';
 import { LoadingBar } from './loading-bar.js';
 import { PopUpWizard } from './alienatingRPG.js';
-import { playerStrongAttack, playerWeakAttack, wizardAttack, wizardPopUpAttack } from './combat.js';
+import { playerStrongAttack, playerWeakAttack, wizardPopUpAttack } from './combat.js';
 
 import $ from 'jquery';
 import 'bootstrap';
@@ -94,6 +94,7 @@ $('#quit-game').click(function() {
   // right swipe is what calls this function
   // creates a variable to house the players name (and pass picture to display)
 
+
   let player = new Player('playerName');
 
   // confirm character choice button assigns character to display variable and hides character creation screen/show level 1
@@ -149,5 +150,4 @@ $('#quit-game').click(function() {
   // hide level two complete screen/ show final boss "dice roll"/ also any text screens
   // })
   // if player loses dice roll show game over screen/ if player wins show credits lol
-
 });
