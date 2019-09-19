@@ -21,6 +21,7 @@ export function wizardAttack(player1, wizard1) {
 
 export function wizardPopUpAttack(targetOutput, player1, wizard1) {
     wizardAttack(player1, wizard1);
+    alert('git wrecked');
     player1.death(targetOutput);
     // pop-up alerts
 }

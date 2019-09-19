@@ -1,11 +1,11 @@
-#noTom {
+body {
   background-image: url("https://i.imgur.com/Wi5BVRg.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
 
-#tom1 {
+/* #tom1 {
   background-image: url("https://i.imgur.com/59fcrpm.jpg");
   background-size: cover;
   background-position: center;
@@ -24,7 +24,7 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-}
+} */
 
 #footerCard {
   margin: 5px;
@@ -85,5 +85,11 @@ button {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+.message {
+  font-size: 30px;
+  color: #8f422b;
+  font-weight: bold;
 
 }

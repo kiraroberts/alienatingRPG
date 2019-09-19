@@ -102,11 +102,13 @@ $(document).ready(function() {
 
 
     // NAME NEEDS TO BE ASSIGNED HERE
-    let player = new Player('playerName');
+    let player = new Player('Still Single');
 
     // THIS BUTTON CONNECTS TO END OF CHARACTER SELECTION & BEGINS WIZARD LEVEL
     $(".wizardFight").click(function() {
       let wizard = new PopUpWizard();
+      $('#playerHealth').text("HP: " + player.hp)
+      $('#enemyHealth').text("HP: " + wizard.hp)
       $(".wizardFight").fadeOut();
       $(".wizard-live").fadeIn();
       setInterval(function() {
@@ -116,6 +118,8 @@ $(document).ready(function() {
 
       $('#strong-attack').click(function() {
         playerStrongAttack(player, wizard);
+        $('#playerHealth').text("HP: " + player.hp)
+        $('#enemyHealth').text("HP: " + wizard.hp)
         console.log('wizard hp', wizard.hp);
         if (wizard.wizardDeath() === true) {
           $('.levelTwoComplete').html('You defeated the monsterous Pop-Up Wizard!');
@@ -129,6 +133,8 @@ $(document).ready(function() {
       $('#player-weak-attack').click(function() {
         playerWeakAttack(player, wizard);
         console.log('wizard hp', wizard.hp);
+        $('#playerHealth').text("HP: " + player.hp)
+        $('#enemyHealth').text("HP: " + wizard.hp)
         if (wizard.wizardDeath() === true) {
           $('.levelTwoComplete').html('You defeated the monsterous Pop-Up Wizard!');
           $('.wizard-live').hide();
