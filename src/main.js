@@ -3,6 +3,8 @@ import { Player } from './alienatingRPG.js';
 import { LoadingBar } from './loading-bar.js';
 import { PopUpWizard } from './alienatingRPG.js';
 import { playerStrongAttack, playerWeakAttack, wizardPopUpAttack } from './combat.js';
+import { rollDice, tomDiceRoll } from './dice-roll.js';
+
 
 import $ from 'jquery';
 import 'bootstrap';
@@ -19,32 +21,33 @@ $(document).ready(function() {
     let game = new Game();
     $('.titleHeader').fadeOut()
     $('.loading-screen').fadeIn(1000)
-    $('#barButton').click(function() {
-      let loadingBar = new LoadingBar();
-      loadingBar.startLoadingBar();
-      setInterval(function() {
-        loadingBar.chooseDiv();
-      }, 300);
+  })
+  $('#barButton').click(function() {
+    let loadingBar = new LoadingBar();
+    loadingBar.startLoadingBar();
+    setInterval(function() {
+      loadingBar.chooseDiv();
+    }, 1500);
 
     });
-    
-  // QUIT GAME BUTTON
-  $('#quit-game').click(function() {
-    location.reload();
-  });
+   
+// QUIT GAME BUTTON
+$('#giveIn').click(function() {
+  location.reload();
+});
 
-    // LEVEL UP MODAL FUNCTION, SHOULD BE RUNNING IN BACKGROUND
-    const modal = document.getElementById("levelUpModal");
+// LEVEL UP MODAL FUNCTION, SHOULD BE RUNNING IN BACKGROUND
+const modal = document.getElementById("levelUpModal");
 
-    const span = document.getElementById("close");
+const span = document.getElementById("close");
 
-    setInterval(function() {
-    modal.style.display = "block";
-    }, Math.floor(Math.random() * 60000));
+setInterval(function() {
+modal.style.display = "block";
+}, Math.floor(Math.random() * 60000));
 
-    span.onclick = function() {
-    modal.style.display = "none";
-    }
+span.onclick = function() {
+modal.style.display = "none";
+}
 
 
   //Character Card Starts Here
@@ -141,7 +144,21 @@ $(document).ready(function() {
     })
   });
 })
+  // $(".levelTwoComplete").click(function() {
+  // hide level two complete screen/ show final boss "dice roll"/ also any text screens
+  // })
+  // roll dice functions
 
+  let playerRoll = $('#roll-dice').val();
+  let npcRoll;
+  if (playerRoll === true) {
+    npcRoll = tomRoll();
+  }
+  if (playerRoll === tomRoll) {
+    $('.dice-roll-again').show();
+  } else if (playerRoll > tomRoll) {
+    $('player-wins').fadeIn();
+  }
 
 });
 
