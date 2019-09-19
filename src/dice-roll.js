@@ -5,7 +5,3 @@ export function rollDice() {
 export function tomDiceRoll() {
   return Math.floor(Math.random() * 6) + 1;
 }
-
-
-
-

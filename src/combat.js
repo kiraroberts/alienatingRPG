@@ -15,10 +15,11 @@ export function playerWeakAttack(player1, wizard1) {
 
 export function wizardAttack(player1, wizard1) {
   let popUpDamage = wizard1.popUpAttack();
+  console.log('damage the wizard is doing', popUpDamage);
   player1.loseHP(popUpDamage);
 }
 
-export function wizardPopUpAttack(targetOutput) {
+export function wizardPopUpAttack(targetOutput, player1, wizard1) {
     wizardAttack(player1, wizard1);
     player1.death(targetOutput);
     // pop-up alerts

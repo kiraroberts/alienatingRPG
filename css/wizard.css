@@ -157,7 +157,8 @@
 .pop-up-wizard {
   position: relative;
   right: -1150px;
-  bottom: -400px
+  bottom: -400px;
+  display: none;
 }
 
 @keyframes bounceNslide {
