@@ -8,6 +8,9 @@ export class LoadingBar {
     function frame() {
       if (width >= 100) {
         clearInterval(id);
+        $('.loading-screen').fadeOut();
+        $('.character-creator').fadeIn();
+        $('.title-screen').fadeOut();
       } else {
         width++;
         bar.style.width = width + '%';
@@ -41,4 +44,3 @@ export class LoadingBar {
     }
   }
 }
-

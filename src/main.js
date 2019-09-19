@@ -15,8 +15,8 @@ import './../css/loading-bar.css';
 
 $(document).ready(function() {
   $('.playgame').click(function(){
-    $('.title-screen').fadeOut()
-    $('.main-body').fadeIn(1000)
+    $('.titleHeader').fadeOut()
+    $('.loading-screen').fadeIn(1000)
   })
   $('#barButton').click(function() {
     let loadingBar = new LoadingBar();
