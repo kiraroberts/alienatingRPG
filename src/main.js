@@ -7,8 +7,9 @@ import { playerStrongAttack, playerWeakAttack, wizardAttack, wizardPopUpAttack }
 import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './../css/okcharacter-styles.css';
 import './../css/styles.css';
-import './../css/title-screen.css'
+import './../css/title-screen.css';
 import './../css/wizard.css';
 import './../css/loading-bar.css';
 
@@ -52,6 +53,42 @@ $('#quit-game').click(function() {
   modal.style.display = "none";
   }
 
+  $("#character-card1").show();
+  $("#character-card2").hide();
+  $("#character-card3").hide();
+  $("#character-card4").hide();
+
+  let characterId = 0;
+  $("#swipe-right1").click(function(event) {
+    characterId = 1;
+  });
+  $("#swipe-right2").click(function(event) {
+    characterId = 2;
+  });
+  $("#swipe-right3").click(function(event) {
+    characterId = 3;
+    console.log(characterId);
+  });
+  $("#swipe-right4").click(function(event) {
+    characterId = 4;
+  });
+
+  $("#swipe-left1").click(function(event) {
+    $("#character-card1").hide();
+    $("#character-card2").show();
+  });
+  $("#swipe-left2").click(function(event) {
+    $("#character-card2").hide();
+    $("#character-card3").show();
+  });
+  $("#swipe-left3").click(function(event) {
+    $("#character-card3").hide();
+    $("#character-card4").show();
+  });
+  $("#swipe-left4").click(function(event) {
+    $("#character-card4").hide();
+    $("#character-card1").show();
+  });
 
    // $('.character-creator').click(function() {
   // right swipe is what calls this function
@@ -112,4 +149,5 @@ $('#quit-game').click(function() {
   // hide level two complete screen/ show final boss "dice roll"/ also any text screens
   // })
   // if player loses dice roll show game over screen/ if player wins show credits lol
+
 });
