@@ -27,7 +27,6 @@ $(document).ready(function() {
       setInterval(function() {
         loadingBar.chooseDiv();
       }, 1500);
-
     });
 
     // QUIT GAME BUTTON
@@ -102,11 +101,13 @@ $(document).ready(function() {
 
 
     // NAME NEEDS TO BE ASSIGNED HERE
-    let player = new Player('playerName');
+    let player = new Player('Bot');
 
     // THIS BUTTON CONNECTS TO END OF CHARACTER SELECTION & BEGINS WIZARD LEVEL
     $(".wizardFight").click(function() {
       let wizard = new PopUpWizard();
+      $('#playerHealth').text("HP: " + player.hp)
+      $('#enemyHealth').text("HP: " + wizard.hp)
       $(".wizardFight").fadeOut();
       $(".wizard-live").fadeIn();
       setInterval(function() {
