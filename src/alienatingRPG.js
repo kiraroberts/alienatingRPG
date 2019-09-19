@@ -45,7 +45,7 @@ export class Player {
 
   death(targetOutput) {
     if (this.hp <= 0) {
-      targetOutput.text('gg uninstall');
+      return targetOutput.text('gg uninstall');
       // add all game over actions here
     // } else if (){
       // button logic
@@ -57,7 +57,6 @@ export class PopUpWizard {
   constructor() {
     this.hp = 10;
     this.attack = 2;
-
   }
 
   loseHP(damage) {
@@ -72,9 +71,8 @@ export class PopUpWizard {
     // set timer for attacks to happen in given interval (maybe random interval?)
   }
 
-  wizardDeath(targetOutput){
+  wizardDeath(){
     if (this.hp <= 0) {
-      (targetOutput).html('You defeated the monsterous Pop-Up Wizard!');
       return true;
     }
   }

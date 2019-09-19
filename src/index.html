@@ -9,11 +9,12 @@
   <div class="container">
     <div class="card fixed-bottom">
       <div class="card-body">
-        <div class="row">
-          <div class="col-md-3 mx-auto">
-            <button type="button" class="btn-info">Heavy Attack</button>
-          </div>
-          <div class="col-md-3 mx-auto">
+
+          <div class="row">
+            <div class="col-md-3 mx-auto">
+              <button type="button" class="btn-info" id="strong-attack">Heavy Attack</button>
+            </div>
+            <div class="col-md-3 mx-auto">
 
           </div>
           <div class="col-md-3 mx-auto">
@@ -21,13 +22,11 @@
           <div class="col-md-3 mx-auto">
 
           </div>
-        </div>
-        <div class="row">
-          <div class="col-md-3 mx-auto">
-            <button type="button" class="btn-success">Quick Attack</button>
-          </div>
-          <div class="col-md-3 mx-auto">
-
+          <div class="row">
+            <div class="col-md-3 mx-auto">
+              <button type="button" class="btn-success" id='player-weak-attack'>Quick Attack</button>
+            </div>
+            <div class="col-md-3 mx-auto">
           </div>
           <div class="col-md-3 mx-auto">
 
@@ -188,17 +187,21 @@
     <!-- final level css elements -->
   </div>
 
-
-  <div class="store">
-    <!-- store css elements -->
-  </div>
-  <div id="game-over">
-    <!-- game over display message-->
-  </div>
-  <div id="levelUpModal" class="modal">
-    <div class="modal-content">
-      <span class="close">$times;</span>
-      <p>You leveled up!</p>
+      <div class="store">
+        <!-- store css elements -->
+      </div>
+      <div id="game-over">
+        <!-- game over display message-->
+      </div>
+      <div id="wizard-dead">
+        <!-- wizard is dead display -->
+      </div>
+      <div id="levelUpModal" class="modal">
+        <div class="modal-content">
+          <span class="close">$times;</span>
+          <p>You leveled up!</p>
+        </div>
+      </div>
     </div>
   </div>
   </div>
