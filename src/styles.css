@@ -11,15 +11,15 @@
   background-repeat: no-repeat;
 }
 
-#character-card1 {
+.character-card {
   border: solid;
   border-color: #2652ab;
   border-width: 4em;
 }
-#swipe-right {
+.swipe-right {
   background-color: #79ba65;
 }
-#swipe-left {
+.swipe-left {
   background-color: #e8533c;
 }
 .match-percent {
@@ -67,7 +67,24 @@
   font-size: 12px;
   font-weight: bold;
   font-family: Helvetica;
+  /* padding-top: .5em; */
+
+}
+.profile-header-bottom {
+  color: #373738;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: Helvetica;
   padding-top: .5em;
+
+}
+.profile-info {
+  color: #2652ab;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Helvetica;
+  /* padding-top: .5em; */
+  text-decoration: underline;
 
 }
 .profile-text {

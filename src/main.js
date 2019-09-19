@@ -7,18 +7,27 @@ import './styles.css';
 
 
 $(document).ready(function() {
+
   $("#character-card1").show();
   $("#character-card2").hide();
   $("#character-card3").hide();
   $("#character-card4").hide();
 
-  $("#swipe-left").click(function(event) {
+
+  $("#swipe-left1").click(function(event) {
     $("#character-card1").hide();
-    $("character-card2").show();
-    if
-
-
-
+    $("#character-card2").show();
   });
-  // $("#hidden_content").slideToggle("slow");
+  $("#swipe-left2").click(function(event) {
+    $("#character-card2").hide();
+    $("#character-card3").show();
+  });
+  $("#swipe-left3").click(function(event) {
+    $("#character-card3").hide();
+    $("#character-card4").show();
+  });
+  $("#swipe-left4").click(function(event) {
+    $("#character-card4").hide();
+    $("#character-card1").show();
+  });
 });
