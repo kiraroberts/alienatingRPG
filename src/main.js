@@ -5,6 +5,7 @@ import { PopUpWizard } from './alienatingRPG.js';
 import { playerStrongAttack, playerWeakAttack, wizardPopUpAttack } from './combat.js';
 import { rollDice, tomDiceRoll } from './dice-roll.js';
 
+
 import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -17,6 +18,7 @@ import './../css/loading-bar.css';
 
 $(document).ready(function() {
   $('.playgame').click(function(){
+    let game = new Game();
     $('.titleHeader').fadeOut()
     $('.loading-screen').fadeIn(1000)
   })
@@ -27,123 +29,125 @@ $(document).ready(function() {
       loadingBar.chooseDiv();
     }, 1500);
 
-  });
+    });
+   
 // QUIT GAME BUTTON
 $('#giveIn').click(function() {
   location.reload();
 });
 
-  $('.start-game').click(function() {
-  let game = new Game();
-  // hide start screen &
-  // fade-in character creator
+// LEVEL UP MODAL FUNCTION, SHOULD BE RUNNING IN BACKGROUND
+const modal = document.getElementById("levelUpModal");
 
-  // LEVEL UP MODAL FUNCTION, SHOULD BE RUNNING IN BACKGROUND
-  const modal = document.getElementById("levelUpModal");
+const span = document.getElementById("close");
 
-  const span = document.getElementByClassName("close")[0];
+setInterval(function() {
+modal.style.display = "block";
+}, Math.floor(Math.random() * 60000));
 
-  setInterval(function() {
-  modal.style.display = "block";
-  }, Math.floor(Math.random() * 60000));
+span.onclick = function() {
+modal.style.display = "none";
+}
 
-  span.onclick = function() {
-  modal.style.display = "none";
-  }
 
-  $("#character-card1").show();
-  $("#character-card2").hide();
-  $("#character-card3").hide();
-  $("#character-card4").hide();
-
-  let characterId = 0;
-  $("#swipe-right1").click(function(event) {
-    characterId = 1;
-  });
-  $("#swipe-right2").click(function(event) {
-    characterId = 2;
-  });
-  $("#swipe-right3").click(function(event) {
-    characterId = 3;
-    console.log(characterId);
-  });
-  $("#swipe-right4").click(function(event) {
-    characterId = 4;
-  });
-
-  $("#swipe-left1").click(function(event) {
-    $("#character-card1").hide();
-    $("#character-card2").show();
-  });
-  $("#swipe-left2").click(function(event) {
-    $("#character-card2").hide();
-    $("#character-card3").show();
-  });
-  $("#swipe-left3").click(function(event) {
-    $("#character-card3").hide();
-    $("#character-card4").show();
-  });
-  $("#swipe-left4").click(function(event) {
-    $("#character-card4").hide();
+  //Character Card Starts Here
     $("#character-card1").show();
-  });
+    $("#character-card2").hide();
+    $("#character-card3").hide();
+    $("#character-card4").hide();
 
-   // $('.character-creator').click(function() {
-  // right swipe is what calls this function
-  // creates a variable to house the players name (and pass picture to display)
-
-
-  let player = new Player('playerName');
-
-  // confirm character choice button assigns character to display variable and hides character creation screen/show level 1
-  // $(".levelOneComplete").click(function() {
-  // hide level one complete screen, show level two/pop up wizard
-  // })
-
-  // THIS BUTTON CONNECTS TO END OF LOADING SCREEN & BEGINS WIZARD LEVEL
-  $('#start-level-two').click(function() {
-    let wizard = new PopUpWizard();
-
-    setInterval(function() {
-      wizardPopUpAttack($('#game-over'));
-      console.log('wizard has attacked', player.hp);
-    }, 3500);
-
-    $('#strong-attack').click(function() {
-      playerStrongAttack(player, wizard);
-      if (wizard.wizardDeath() === true) {
-        $('.levelTwoComplete').html('You defeated the monsterous Pop-Up Wizard!');
-        $('.wizard-live').hide();
-        $('.wizard-dead').show();
-        $('.wizard-dead').fadeOut(1000);
-        $(".levelTwoComplete").fadeIn(1500);
-      }
+    let characterId = 0;
+    $("#swipe-right1").click(function(event) {
+      characterId = 1;
+      $(".character-creator-page").fadeOut();
+      $(".pop-up-wizard").show();
+      $(".main-body").show();
+      });
+ 
+    $("#swipe-right2").click(function(event) {
+      characterId = 2;
+      $(".character-creator-page").fadeOut();
+      $(".pop-up-wizard").show();
+      $(".main-body").show();
+        });
+    $("#swipe-right3").click(function(event) {
+      characterId = 3;
+      $(".character-creator-page").fadeOut();
+      $(".pop-up-wizard").show();
+      $(".main-body").show();
+      console.log(characterId);
+    });
+    $("#swipe-right4").click(function(event) {
+      characterId = 4;
+      $(".character-creator-page").fadeOut();
+      $(".pop-up-wizard").show();
+      $(".main-body").show();
     });
 
-    $('#player-weak-attack').click(function() {
-      playerWeakAttack(player, wizard);
-      if (wizard.wizardDeath() === true) {
-        $('.levelTwoComplete').html('You defeated the monsterous Pop-Up Wizard!');
-        $('.wizard-live').hide();
-        $('.wizard-dead').show();
-        $('.wizard-dead').fadeOut(1000);
-        $(".levelTwoComplete").fadeIn(1500);
-      }
+    $("#swipe-left1").click(function(event) {
+      $("#character-card1").hide();
+      $("#character-card2").show();
+    });
+    $("#swipe-left2").click(function(event) {
+      $("#character-card2").hide();
+      $("#character-card3").show();
+    });
+    $("#swipe-left3").click(function(event) {
+      $("#character-card3").hide();
+      $("#character-card4").show();
+    });
+    $("#swipe-left4").click(function(event) {
+      $("#character-card4").hide();
+      $("#character-card1").show();
     });
 
-  $(".lvl2next").click(function() {
-    $(".levelTwoComplete").fadeOut()
-    $(".pig-dice").fadeIn();
+  // NAME NEEDS TO BE ASSIGNED HERE 
+ let player = new Player('playerName');
+    
+    // THIS BUTTON CONNECTS TO END OF CHARACTER SELECTION & BEGINS WIZARD LEVEL
+     $(".wizardFight").click(function() {
+      let wizard = new PopUpWizard();
+      $(".wizardFight").fadeOut();
+      $(".wizard-live").fadeIn();
+      setInterval(function() {
+        wizardPopUpAttack($('#game-over'));
+        console.log('wizard has attacked', player.hp);
+      }, 3500);
 
-  })
-  });
-  });
+      $('#strong-attack').click(function() {
+        playerStrongAttack(player, wizard);
+        if (wizard.wizardDeath() === true) {
+          $('.levelTwoComplete').html('You defeated the monsterous Pop-Up Wizard!');
+          $('.wizard-live').hide();
+          $('.wizard-dead').show();
+          $('.wizard-dead').fadeOut(1000);
+          $(".levelTwoComplete").fadeIn(1500);
+        }
+      });
 
+      $('#player-weak-attack').click(function() {
+        playerWeakAttack(player, wizard);
+        if (wizard.wizardDeath() === true) {
+          $('.levelTwoComplete').html('You defeated the monsterous Pop-Up Wizard!');
+          $('.wizard-live').hide();
+          $('.wizard-dead').show();
+          $('.wizard-dead').fadeOut(1000);
+          $(".levelTwoComplete").fadeIn(1500);
+        }
+      });
+
+    $(".lvl2next").click(function() {
+      $(".levelTwoComplete").fadeOut()
+      $(".pig-dice").fadeIn();
+
+      })
+    })
+  });
+})
   // $(".levelTwoComplete").click(function() {
   // hide level two complete screen/ show final boss "dice roll"/ also any text screens
   // })
   // roll dice functions
-
 
   let playerRoll = $('#roll-dice').val();
   let npcRoll;
@@ -155,4 +159,6 @@ $('#giveIn').click(function() {
   } else if (playerRoll > tomRoll) {
     $('player-wins').fadeIn();
   }
+
 });
+
