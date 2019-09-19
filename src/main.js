@@ -21,6 +21,10 @@ $(document).ready(function() {
   $('#barButton').click(function() {
     let loadingBar = new LoadingBar();
     loadingBar.startLoadingBar();
+    setInterval(function() {
+      loadingBar.chooseDiv();
+    }, 300);
+
   });
 
   // $('.start-game').show();
@@ -48,10 +52,9 @@ $(document).ready(function() {
   // right swipe is what calls this function
   // creates a variable to house the players name (and pass picture to display)
 
-
   let player = new Player('playerName');
 
- // confirm character choice button assigns character to display variable and hides character creation screen/show level 1
+  // confirm character choice button assigns character to display variable and hides character creation screen/show level 1
 
   // })
   // loading screen/level 1 function calls
@@ -64,6 +67,7 @@ $(document).ready(function() {
   // THIS BUTTON CONNECTS TO END OF LOADING SCREEN & BEGINS WIZARD LEVEL
   $('#start-level-two').click(function() {
     let wizard = new PopUpWizard();
+
     setInterval(function() {
       wizardPopUpAttack($('#game-over'));
       console.log('wizard has attacked', player.hp);
