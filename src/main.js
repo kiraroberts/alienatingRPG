@@ -26,6 +26,11 @@ $(document).ready(function() {
     }, 300);
 
   });
+// QUIT GAME BUTTON
+$('#quit-game').click(function() {
+  location.reload();
+});
+
 
   // $('.start-game').show();
 
