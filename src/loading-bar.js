@@ -9,8 +9,9 @@ export class LoadingBar {
       if (width >= 100) {
         clearInterval(id);
         $('.loading-screen').fadeOut();
-        $('.character-creator').fadeIn();
+        $('.character-creator-page').fadeIn();
         $('.title-screen').fadeOut();
+        $('#character-card1').show();
       } else {
         width++;
         bar.style.width = width + '%';
