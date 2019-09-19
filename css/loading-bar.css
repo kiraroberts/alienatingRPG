@@ -11,3 +11,16 @@
   line-height: 30px;
   color: white;
 }
+
+.message {
+  display: none;
+}
+
+.loading-screen {
+  position: relative;
+  top: 45%;
+  display: none;
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+}
