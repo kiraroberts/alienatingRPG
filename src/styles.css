@@ -15,18 +15,28 @@
   border: solid;
   border-color: #2652ab;
   border-width: 4em;
+  border-bottom-width: 4em;
+  border-bottom-color: #2652ab;
+  border-left-width: 6em;
+  border-right-width: 6em;
 }
 .swipe-right {
   background-color: #79ba65;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Helvetica;
 }
 .swipe-left {
   background-color: #e8533c;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Helvetica;
 }
 .match-percent {
   border-radius: 50%;
   border-color: #deb309;
   border-style: solid;
-  border-width: bold;
+  border-width: medium;
   border-spacing: inherit;
   display: inline-block;
   text-align: center;
@@ -37,26 +47,23 @@
 }
 .enemy-percent {
   border-radius: 50%;
-  border-color: grey;
+  border-color: #c4c4c4;
   border-style: solid;
-  border-width: bold;
+  border-width: medium;
   border-spacing: inherit;
   display: inline-block;
   text-align: center;
-  color: grey;
+  color: #c4c4c4;
   padding: .5em;
   margin: .5em;
   font-family: Helvetica;
 
 }
 #border-bottom {
-  text-align: justify;
-  border-bottom-style: solid;
-  border-bottom-width: thin;
-  border-bottom-color: #2652ab;
-  padding: 0px;
-  word-spacing: 4em;
+  word-spacing: 5em;
   font-family: Helvetica;
+  font-size: 14px;
+  font-weight: lighter;
 
 }
 .profpic {
@@ -80,12 +87,10 @@
 }
 .profile-info {
   color: #2652ab;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   font-family: Helvetica;
-  /* padding-top: .5em; */
-  text-decoration: underline;
-
+  padding-top: .5em;
 }
 .profile-text {
   color: #373738;
@@ -97,13 +102,17 @@ a.disabled {
   cursor: default;
 }
 .profile-logopart1 {
+  padding: .02em;
+  padding-left: .1em;
+  padding-right: .1em;
   font-style: italic;
   background-color: #f296c9;
-  border-radius: 10%;
+  border-radius: 15%;
   border-color: #f296c9;
+  border-width: thick;
   font-size: 36px;
   font-weight: bold;
-  letter-spacing: .2em;
+  letter-spacing: .1em;
   font-family: sans-serif;
   color: white;
   text-shadow: 4px 4px 0 #2652ab, 4px -4px 0 #2652ab, -4px 4px 0 #2652ab, -4px -4px 0 #2652ab, 4px 0px 0 #2652ab, 0px 4px 0 #2652ab, -4px 0px 0 #2652ab, 0px -4px 0 #2652ab;
@@ -116,3 +125,4 @@ a.disabled {
   color: white;
   text-shadow: 4px 4px 0 #6b91db, 4px -4px 0 #6b91db, -4px 4px 0 #6b91db, -4px -4px 0 #6b91db, 4px 0px 0 #6b91db, 0px 4px 0 #6b91db, -4px 0px 0 #6b91db, 0px -4px 0 #6b91db;
 }
+/* End CSS for character selector screen */

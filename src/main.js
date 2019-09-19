@@ -7,13 +7,26 @@ import './styles.css';
 
 
 $(document).ready(function() {
-
   $("#character-card1").show();
   $("#character-card2").hide();
   $("#character-card3").hide();
   $("#character-card4").hide();
 
-
+  let characterId = 0;
+  $("#swipe-right1").click(function(event) {
+    characterId = 1;
+  });
+  $("#swipe-right2").click(function(event) {
+    characterId = 2;
+  });
+  $("#swipe-right3").click(function(event) {
+    characterId = 3;
+    console.log(characterId);
+  });
+  $("#swipe-right4").click(function(event) {
+    characterId = 4;
+  });
+  
   $("#swipe-left1").click(function(event) {
     $("#character-card1").hide();
     $("#character-card2").show();
