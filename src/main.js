@@ -27,7 +27,7 @@ $(document).ready(function() {
       }, 300);
 
     });
-    
+
   // QUIT GAME BUTTON
   $('#quit-game').click(function() {
     location.reload();
@@ -60,7 +60,7 @@ $(document).ready(function() {
       $(".pop-up-wizard").show();
       $(".main-body").show();
       });
- 
+
     $("#swipe-right2").click(function(event) {
       characterId = 2;
       $(".character-creator-page").fadeOut();
@@ -98,9 +98,9 @@ $(document).ready(function() {
       $("#character-card1").show();
     });
 
-  // NAME NEEDS TO BE ASSIGNED HERE 
+  // NAME NEEDS TO BE ASSIGNED HERE
  let player = new Player('playerName');
-    
+
     // THIS BUTTON CONNECTS TO END OF CHARACTER SELECTION & BEGINS WIZARD LEVEL
      $(".wizardFight").click(function() {
       let wizard = new PopUpWizard();
@@ -141,7 +141,3 @@ $(document).ready(function() {
     })
   });
 })
-
-
-});
-
