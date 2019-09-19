@@ -2,7 +2,7 @@ import { Game } from './alienatingRPG.js';
 import { Player } from './alienatingRPG.js';
 import { LoadingBar } from './loading-bar.js';
 import { PopUpWizard } from './alienatingRPG.js';
-import { playerStrongAttack, playerWeakAttack, wizardAttack, wizardPopUpAttack } from './combat.js';
+import { playerStrongAttack, playerWeakAttack, wizardPopUpAttack } from './combat.js';
 
 import $ from 'jquery';
 import 'bootstrap';
@@ -18,7 +18,7 @@ $(document).ready(function() {
   });
 
   // $('.start-game').show();
-  
+
   $('.start-game').click(function() {
   let game = new Game();
   // hide start screen &
@@ -26,13 +26,13 @@ $(document).ready(function() {
 
   // LEVEL UP MODAL FUNCTION, SHOULD BE RUNNING IN BACKGROUND
   const modal = document.getElementById("levelUpModal");
-  
+
   const span = document.getElementByClassName("close")[0];
-  
+
   setInterval(function() {
   modal.style.display = "block";
   }, Math.floor(Math.random() * 60000));
-  
+
   span.onclick = function() {
   modal.style.display = "none";
   }
@@ -42,7 +42,7 @@ $(document).ready(function() {
   // right swipe is what calls this function
   // creates a variable to house the players name (and pass picture to display)
 
-  
+
   let player = new Player('playerName');
 
  // confirm character choice button assigns character to display variable and hides character creation screen/show level 1
@@ -60,9 +60,9 @@ $(document).ready(function() {
     let wizard = new PopUpWizard();
     setInterval(function() {
       wizardPopUpAttack($('#game-over'));
-      console.log('wizard has attacked', )
+      console.log('wizard has attacked')
     }, 3500);
-  
+
     $('#strong-attack').click(function() {
       playerStrongAttack(player, wizard);
       if (wizard.wizardDeath() === true) {
@@ -71,9 +71,9 @@ $(document).ready(function() {
         $('.wizard-dead').show();
         $('.wizard-dead').fadeOut(1000);
         $(".levelTwoComplete").fadeIn(1500);
-      };
+      }
     });
-    
+
     $('#player-weak-attack').click(function() {
       playerWeakAttack(player, wizard);
       if (wizard.wizardDeath() === true) {
@@ -82,20 +82,19 @@ $(document).ready(function() {
         $('.wizard-dead').show();
         $('.wizard-dead').fadeOut(1000);
         $(".levelTwoComplete").fadeIn(1500);
-      };
+      }
     });
- 
+
   $(".lvl2next").click(function() {
     $(".levelTwoComplete").fadeOut()
     $(".pig-dice").fadeIn();
- 
+
   })
   });
   });
-  
+
   // $(".levelTwoComplete").click(function() {
   // hide level two complete screen/ show final boss "dice roll"/ also any text screens
   // })
   // if player loses dice roll show game over screen/ if player wins show credits lol
 });
-
