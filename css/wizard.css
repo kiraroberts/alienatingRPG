@@ -53,6 +53,7 @@
 }
 
 .wizard-dead {
+  position: relative;
   width: 300px;
   display: none;
 }
@@ -114,6 +115,7 @@
 }
 
 .bod {
+
   width: 200px;
   margin-left: 75px;
 }
