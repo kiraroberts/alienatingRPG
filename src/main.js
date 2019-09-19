@@ -2,13 +2,14 @@ import { Game } from './alienatingRPG.js';
 import { Player } from './alienatingRPG.js';
 import { LoadingBar } from './loading-bar.js';
 import { PopUpWizard } from './alienatingRPG.js';
-import { playerStrongAttack, playerWeakAttack, wizardAttack, wizardPopUpAttack } from './combat.js';
+import { playerStrongAttack, playerWeakAttack, wizardPopUpAttack } from './combat.js';
 
 import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './../css/okcharacter-styles.css';
 import './../css/styles.css';
-import './../css/title-screen.css'
+import './../css/title-screen.css';
 import './../css/wizard.css';
 import './../css/loading-bar.css';
 
@@ -23,7 +24,7 @@ $(document).ready(function() {
     loadingBar.startLoadingBar();
     setInterval(function() {
       loadingBar.chooseDiv();
-    }, 300);
+    }, 1500);
 
   });
 // QUIT GAME BUTTON
@@ -49,10 +50,47 @@ $('#quit-game').click(function() {
   modal.style.display = "none";
   }
 
+  $("#character-card1").show();
+  $("#character-card2").hide();
+  $("#character-card3").hide();
+  $("#character-card4").hide();
+
+  let characterId = 0;
+  $("#swipe-right1").click(function(event) {
+    characterId = 1;
+  });
+  $("#swipe-right2").click(function(event) {
+    characterId = 2;
+  });
+  $("#swipe-right3").click(function(event) {
+    characterId = 3;
+    console.log(characterId);
+  });
+  $("#swipe-right4").click(function(event) {
+    characterId = 4;
+  });
+
+  $("#swipe-left1").click(function(event) {
+    $("#character-card1").hide();
+    $("#character-card2").show();
+  });
+  $("#swipe-left2").click(function(event) {
+    $("#character-card2").hide();
+    $("#character-card3").show();
+  });
+  $("#swipe-left3").click(function(event) {
+    $("#character-card3").hide();
+    $("#character-card4").show();
+  });
+  $("#swipe-left4").click(function(event) {
+    $("#character-card4").hide();
+    $("#character-card1").show();
+  });
 
    // $('.character-creator').click(function() {
   // right swipe is what calls this function
   // creates a variable to house the players name (and pass picture to display)
+
 
   let player = new Player('playerName');
 
