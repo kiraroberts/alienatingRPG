@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 export class LoadingBar {
   startLoadingBar() {
     let bar = document.getElementById("loadingBar");
@@ -14,33 +16,27 @@ export class LoadingBar {
     }
   }
 
-  showRandomDiv() {
-    let randomNumber = Math.floor(Math.random() * 4);
-    let timer;
+  chooseDiv() {
+    let randomNumber;
+    randomNumber = Math.floor(Math.random() * 3 + 1); //don't change +1, change *n if adding additiional divs
+    console.log(randomNumber);
 
-    function intervalFunction() {
-      timer = setInterval(chooseDiv, 3000) //time in ms until next div is chosen.
+    if (randomNumber === 1) {
+      $('#loadingMessage1').show();
+      $('#loadingMessage2').hide();
+      $('#loadingMessage3').hide();
     }
 
-    function chooseDiv() {
-      if (randomNumber === 1) {
-        $('#loadingMessage1').style.display = 'inline';
-        $('#loadingMessage2').style.display = 'none';
-        $('#loadingMessage3').style.display = 'none';
-      }
-      if (randomNumber === 2) {
-        $('#loadingMessage1').style.display = 'none';
-        $('#loadingMessage2').style.display = 'inline';
-        $('#loadingMessage3').style.display = 'none';
-      }
-      if (randomNumber === 3) {
-        $('#loadingMessage1').style.display = 'none';
-        $('#loadingMessage2').style.display = 'none';
-        $('#loadingMessage3').style.display = 'inline';
-      }
+    if (randomNumber === 2) {
+      $('#loadingMessage1').hide();
+      $('#loadingMessage2').show();
+      $('#loadingMessage3').hide();
+    }
+
+    if (randomNumber === 3) {
+      $('#loadingMessage1').hide();
+      $('#loadingMessage2').hide();
+      $('#loadingMessage3').show();
     }
   }
 }
-
-}
-

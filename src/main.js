@@ -16,10 +16,14 @@ $(document).ready(function() {
   $('#barButton').click(function() {
     let loadingBar = new LoadingBar();
     loadingBar.startLoadingBar();
+    setInterval(function() {
+      loadingBar.chooseDiv();
+    }, 300);
+
   });
 
   // $('.start-game').show();
-  
+
   $('.start-game').click(function() {
   let game = new Game();
   // hide start screen &
@@ -31,7 +35,7 @@ $(document).ready(function() {
   // creates a variable to house the players name (and pass picture to display)
 
   let player = new Player('bot')
-  // 
+  //
  // confirm character choice button assigns character to display variable and hides character creation screen/show level 1
 
   // })
@@ -48,8 +52,8 @@ $(document).ready(function() {
     console.log('player strong attack', playerStrongAttack);
     console.log('player weak attack', playerWeakAttack);
     console.log('wizard attack', wizardAttack);
-    
-  
+
+
   if (wizard.wizardDeath($('.levelTwoComplete')) === true) {
       $('.wizard-live').hide();
       $('.wizard-dead').show();
