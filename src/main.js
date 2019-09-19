@@ -4,6 +4,7 @@ import { LoadingBar } from './loading-bar.js';
 import { PopUpWizard } from './alienatingRPG.js';
 import { playerStrongAttack, playerWeakAttack, wizardPopUpAttack } from './combat.js';
 import { rollDice, tomDiceRoll } from './dice-roll.js';
+import { changeBodyToTom1 } from './background.js';
 
 
 import $ from 'jquery';
