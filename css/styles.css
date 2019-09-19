@@ -1,10 +1,31 @@
-body {
-  background-image: url("https://images.unsplash.com/photo-1561912847-95100ed8646c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+#noTom {
+  background-image: url("https://i.imgur.com/Wi5BVRg.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-
 }
+
+#tom1 {
+  background-image: url("https://i.imgur.com/59fcrpm.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#tom2 {
+  background-image: url("https://i.imgur.com/6Gxi5Ga.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#tom3 {
+  background-image: url("https://i.imgur.com/Bb3hnE8.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
 #footerCard {
   margin: 5px;
   background: rgba(50, 50, 50, 0.7);
