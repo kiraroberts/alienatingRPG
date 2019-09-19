@@ -121,7 +121,7 @@ $(document).ready(function() {
           $('.levelTwoComplete').html('You defeated the monsterous Pop-Up Wizard!');
           $('.wizard-live').hide();
           $('.wizard-dead').show();
-          // $('.wizard-dead').fadeOut(1000);
+          $('.wizard-dead').fadeOut(5000);
           $(".levelTwoComplete").fadeIn(1500);
         }
       });
@@ -133,8 +133,11 @@ $(document).ready(function() {
           $('.levelTwoComplete').html('You defeated the monsterous Pop-Up Wizard!');
           $('.wizard-live').hide();
           $('.wizard-dead').show();
-          // $('.wizard-dead').fadeOut(1000);
-          $(".levelTwoComplete").fadeIn(1500);
+          $('.wizard-dead').fadeOut(5000);
+          $(".levelTwoComplete").fadeIn(5001);
+          setTimeout(function() {
+            $('.pop-up-wizard').hide();
+          }, 5500);
         }
       });
 
