@@ -3,6 +3,7 @@ import { Player } from './alienatingRPG.js';
 import { LoadingBar } from './loading-bar.js';
 import { PopUpWizard } from './alienatingRPG.js';
 import { playerStrongAttack, playerWeakAttack, wizardPopUpAttack } from './combat.js';
+import { rollDice, tomDiceRoll } from './dice-roll.js';
 
 import $ from 'jquery';
 import 'bootstrap';
@@ -28,7 +29,7 @@ $(document).ready(function() {
 
   });
 // QUIT GAME BUTTON
-$('#quit-game').click(function() {
+$('#giveIn').click(function() {
   location.reload();
 });
 
@@ -95,11 +96,6 @@ $('#quit-game').click(function() {
   let player = new Player('playerName');
 
   // confirm character choice button assigns character to display variable and hides character creation screen/show level 1
-
-  // })
-  // loading screen/level 1 function calls
-  // end of function hides level 1 and shows level one complete screen
-  // })
   // $(".levelOneComplete").click(function() {
   // hide level one complete screen, show level two/pop up wizard
   // })
@@ -146,5 +142,17 @@ $('#quit-game').click(function() {
   // $(".levelTwoComplete").click(function() {
   // hide level two complete screen/ show final boss "dice roll"/ also any text screens
   // })
-  // if player loses dice roll show game over screen/ if player wins show credits lol
+  // roll dice functions
+
+
+  let playerRoll = $('#roll-dice').val();
+  let npcRoll;
+  if (playerRoll === true) {
+    npcRoll = tomRoll();
+  }
+  if (playerRoll === tomRoll) {
+    $('.dice-roll-again').show();
+  } else if (playerRoll > tomRoll) {
+    $('player-wins').fadeIn();
+  }
 });
